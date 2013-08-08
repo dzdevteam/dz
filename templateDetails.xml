@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+	<name>dz</name>
+	<creationDate>November 2012</creationDate>
+	<author>DZ Development Team</author>
+	<authorEmail>support@dezign.vn</authorEmail>
+	<authorUrl>http://www.dezign.vn</authorUrl>
+	<copyright>Copyright (C) 2012 DEZ Co,.ltd. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.3</version>
+	<description></description>
+
+	<files>		
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>dz.php</filename>
+		<filename>compiler.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>error.php</filename>
+		<folder>core</folder>
+		<folder>css</folder>
+		<folder>css-compiled</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>layouts</folder>
+		<folder>less</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/templates/dz/core/fields/">
+			<fieldset name="basic">
+				<field type="spacer" name="logospacer" label="DZ_FIELDS_LOGO_SETTINGS_LABEL" />
+				<field
+					name="logoImage"
+					type="media"
+					label="DZ_FIELD_LOGO_IMAGE_LABEL"
+					/>
+				<field
+					name="logoText"
+					type="text"
+					label="DZ_FIELD_LOGO_TEXT_LABEL"
+					size="30"
+					/>
+				<field
+					name="logoSlogan"
+					type="text"
+					label="DZ_FIELD_SLOGAN_LABEL"
+					size="30"
+					default=""
+					/>	
+				<field
+					name="logoDisplay"
+					type="list"
+					label="DZ_FIELD_LOGO_DISPLAY_LABEL"
+					default="0"
+					>
+						<option value="0">DZ_FIELD_LOGO_DISPLAY_TEXT_ONLY</option>
+						<option value="1">DZ_FIELD_LOGO_DISPLAY_IMAGE_ONLY</option>
+						<option value="2">DZ_FIELD_LOGO_DISPLAY_TEXT_AND_SLOGAN</option>
+						<option value="3">DZ_FIELD_LOGO_DISPLAY_IMAGE_AND_TEXT</option>
+						<option value="4">DZ_FIELD_LOGO_DISPLAY_IMAGE_TEXT_SLOGAN</option>
+				</field>
+				<field
+					name="logoPosition"
+					type="moduleposition"
+					label="DZ_FIELD_LOGO_POSITION_LABEL"
+					description="DZ_FIELD_LOGO_POSITION_DESC"
+					/>
+			</fieldset>			
+			<fieldset name="advanced" addfieldpath="/administrator/components/com_modules/models/fields">
+				<field
+					name="compactHome"
+					label="DZ_FIELD_OTHER_COMPACT_HOME_LABEL"
+					description="DZ_FIELD_OTHER_COMPACT_HOME_DESC"
+					type="radio"
+					default="0">
+					<option value="0">DZ_NO</option>
+					<option value="1">DZ_YES</option>
+				</field>
+				<field
+					name="modulesOverComp"
+					label="DZ_FIELD_OTHER_MOD_OVER_COMP_LABEL"
+					description="DZ_FIELD_OTHER_MOD_OVER_COMP_DESC"
+					type="radio"
+					default="0">
+					<option value="0">DZ_NO</option>
+					<option value="1">DZ_YES</option>
+				</field>
+				<field
+					name="responsive"
+					label="DZ_FIELD_OTHER_RESPONSIVE_LABEL"
+					description="DZ_FIELD_OTHER_RESPONSIVE_DESC"
+					type="radio"
+					default="1">
+					<option value="0">DZ_NO</option>
+					<option value="1">DZ_YES</option>
+				</field>
+				<field
+					name="colorizeCSS"
+					type="filelist"
+					default="-1"
+					label="DZ_FIELD_OTHER_COLOR_CSS_LABEL"
+					description="DZ_FIELD_OTHER_COLOR_CSS_DESC"
+					directory="templates/dz/css/colors/" 
+					filter="\.css$"
+					hide_default="true"/>
+				<field
+					name="analytics_code"
+					type="text"
+					size="40"
+					default=""
+					label="DZ_FIELD_OTHER_GOOGLE_ANALYTICS_LABEL"
+					description="DZ_FIELD_OTHER_GOOGLE_ANALYTICS_DESC" />			
+				<field type="spacer" name="topspacer" label="DZ_FIELDS_POSITION_LAYOUT_LABEL" />
+				<field 
+					name="fixedtoplayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_FIXEDTOP_LABEL" 
+					default="2-2-2-2-2-2,0" 
+					description="DZ_FIELD_LAYOUT_FIXEDTOP_DESC"
+					/>
+				<field 
+					name="toplayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_TOP_LABEL" 
+					default="2-2-2-2-2-2,0" 
+					description="DZ_FIELD_LAYOUT_TOP_DESC"
+					/>
+				<field
+					name="headerlayout"
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_HEADER_LABEL"
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_HEADER_DESC"
+					/>
+				<field 
+					name="showcaselayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_SHOWCASE_LABEL" 
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_SHOWCASE_DESC" 
+					/>				
+				<field 
+					name="featurelayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_FEATURE_LABEL" 
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_FEATURE_DESC" />
+				<field 
+					name="maintoplayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_MAINTOP_LABEL" 
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_MAINTOP_DESC" />
+				<field 
+					name="mainlayout" 
+					type="mainlayout"
+					label="DZ_FIELD_LAYOUT_MAIN_LABEL" 
+					default="4,2-4-3-3,0,0"
+					description="DZ_FIELD_LAYOUT_MAIN_DESC" />
+				<field 
+					name="mainbottomlayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_MAINBOTTOM_LABEL" 
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_MAINBOTTOM_DESC" />
+				<field 
+					name="bottomlayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_BOTTOM_LABEL" 
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_BOTTOM_DESC" />
+				<field 
+					name="footerlayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_FOOTER_LABEL" 
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_FOOTER_DESC" />
+				<field 
+					name="copyrightlayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_COPYRIGHT_LABEL" 
+					default="2-2-2-2-2-2,0"
+					description="DZ_FIELD_LAYOUT_COPYRIGHT_DESC" />
+				<field 
+					name="fixedbottomlayout" 
+					type="rowlayout"
+					label="DZ_FIELD_LAYOUT_FIXEDBOTTOM_LABEL" 
+					default="2-2-2-2-2-2,0" 
+					description="DZ_FIELD_LAYOUT_FIXEDBOTTOM_DESC"
+					/>
+			</fieldset>
+			<fieldset name="css" label="DZ_FIELDS_LESS_OPTIONS">
+				<field type="spacer" label="DZ_FIELDS_VARIABLES_OPTIONS_LABEL" />
+				<field
+					name="baseFontSize"
+					default="14px"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_BASEFONTSIZE" />
+				<field
+					name="sansFontFamily"
+					default="'Helvetica Neue', Helvetica, Arial, sans-serif"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_SANSFONTFAMILY" />
+				<field
+					name="serifFontFamily"
+					default="Georgia, 'Times New Roman', Times, serif"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_SERIFFONTFAMILY" />
+				<field
+					name="baseFontFamily"
+					default="@sansFontFamily"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_BASEFONTFAMILY" />
+				<field
+					name="baseLineHeight"
+					default="20px"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_BASELINEHEIGHT" />
+				<field
+					name="textColor"
+					default="#333"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_TEXTCOLOR" />
+				<field
+					name="linkColor"
+					default="#08c"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_LINKCOLOR" />
+				<field
+					name="linkColorHover"
+					default="darken(@linkColor, 15%)"
+					type="text"
+					size="40"
+					label="DZ_FIELD_VARIABLE_LINKCOLORHOVER" />
+				<field type="spacer" label="DZ_FIELDS_RESPONSIVE_OPTIONS_LABEL" />
+				<field
+					name="responsive-767px-max"
+					label="DZ_FIELD_RESPONSIVE_767MAX_LABEL"
+					type="radio"
+					default="1">
+					<option value="0">DZ_NO</option>
+					<option value="1">DZ_YES</option>
+				</field>
+				<field
+					name="responsive-768px-979px"
+					label="DZ_FIELD_RESPONSIVE_768-979_LABEL"
+					type="radio"
+					default="1">
+					<option value="0">DZ_NO</option>
+					<option value="1">DZ_YES</option>
+				</field>
+				<field
+					name="responsive-1200px-min"
+					label="DZ_FIELD_RESPONSIVE_1200MIN_LABEL"
+					type="radio"
+					default="1">
+					<option value="0">DZ_NO</option>
+					<option value="1">DZ_YES</option>
+				</field>
+				<field type="spacer" label="DZ_FIELDS_COMPILE_LESS_LABEL" />
+				<field
+					type="compileless"
+					label="DZ_FIELD_COMPILE_LESS_LABEL" />
+			</fieldset>
+		</fields>
+	</config>
+	<positions>
+		<position>fixedtop-1</position>
+		<position>fixedtop-2</position>
+		<position>fixedtop-3</position>
+		<position>fixedtop-4</position>
+		<position>fixedtop-5</position>
+		<position>fixedtop-6</position>
+		<position>top-1</position>
+		<position>top-2</position>
+		<position>top-3</position>
+		<position>top-4</position>
+		<position>top-5</position>
+		<position>top-6</position>
+		<position>header-1</position>
+		<position>header-2</position>
+		<position>header-3</position>
+		<position>header-4</position>
+		<position>header-5</position>
+		<position>header-6</position>
+		<position>showcase-1</position>
+		<position>showcase-2</position>
+		<position>showcase-3</position>
+		<position>showcase-4</position>
+		<position>showcase-5</position>
+		<position>showcase-6</position>
+		<position>feature-1</position>
+		<position>feature-2</position>
+		<position>feature-3</position>
+		<position>feature-4</position>
+		<position>feature-5</position>
+		<position>feature-6</position>
+		<position>maintop-1</position>
+		<position>maintop-2</position>
+		<position>maintop-3</position>
+		<position>maintop-4</position>
+		<position>maintop-5</position>
+		<position>maintop-6</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>main</position>
+		<position>before</position>
+		<position>after</position>
+		<position>mainbottom-1</position>
+		<position>mainbottom-2</position>
+		<position>mainbottom-3</position>
+		<position>mainbottom-4</position>
+		<position>mainbottom-5</position>
+		<position>mainbottom-6</position>
+		<position>bottom-1</position>
+		<position>bottom-2</position>
+		<position>bottom-3</position>
+		<position>bottom-4</position>
+		<position>bottom-5</position>
+		<position>bottom-6</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-5</position>
+		<position>footer-6</position>
+		<position>copyright-1</position>
+		<position>copyright-2</position>
+		<position>copyright-3</position>
+		<position>copyright-4</position>
+		<position>copyright-5</position>
+		<position>copyright-6</position>
+		<position>fixedbottom-1</position>
+		<position>fixedbottom-2</position>
+		<position>fixedbottom-3</position>
+		<position>fixedbottom-4</position>
+		<position>fixedbottom-5</position>
+		<position>fixedbottom-6</position>
+	</positions>
+</extension>

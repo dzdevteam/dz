@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+.logo {margin:0; padding:0; margin-bottom:20px;}
+.pos-top {margin-bottom:20px;}
+
+.tier {border-bottom:1px solid #ccc; padding:20px;}
+.tier-2 , .tier-4 {background:#eee;}
+.tier-5 {background:#333; color:#ccc;}
+
+
+
+

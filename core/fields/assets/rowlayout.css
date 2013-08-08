@@ -1,0 +1,94 @@
+
+ @CHARSET "UTF-8";
+
+.rowlayout_label {
+	font-size:10px;
+	width:45%;
+	text-align:center;
+	color:#999;
+	margin-bottom:-5px;
+}
+.slider {
+	background: #E7DFEE;
+	height: 5px;
+	width: 100%;
+	float: left;
+	border-radius: 2px;
+	margin-top: 5px;
+}
+.slider .knob {
+	background: grey;
+	width: 10px;
+	height: 10px;
+	margin-top: -2px;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.slider_value {
+	display: none;
+}
+
+.visual-container {
+	height: 32px;
+	line-height: 32px;
+	width: 100%;
+	float: left;
+}
+
+.visual-container .visual-mini {
+	border-left: 1px solid #D0D0D0;
+	border-top: 1px solid #D0D0D0;
+	border-bottom: 1px solid #D0D0D0;
+	margin-left: -1px;
+	float: left;
+	text-align:center;
+	display: inline;
+	cursor: pointer;
+}
+
+.visual-main {
+	background-color: #EEEEEE;
+}
+.visual-container .visual-mini:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.visual-container .visual-mini:last-child {
+	border-right: 1px solid #D0D0D0;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.visual-container .grid-2 {
+	width: 15%;
+}
+.visual-container .grid-3 {
+	width: 22.5%;
+}
+.visual-container .grid-4 {
+	width: 30%;
+}
+.visual-container .grid-5 {
+	width: 37.5%;
+}
+.visual-container .grid-6 {
+	width: 45%;
+}
+.visual-container .grid-7 {
+	width: 52.5%;
+}
+.visual-container .grid-8 {
+	width: 60%;
+}
+.visual-container .grid-9 {
+	width: 67.5%;
+}
+.visual-container .grid-10 {
+	width: 75%;
+}
+.visual-container .grid-12 {
+	width: 90%;
+}
+
+.rowlayout_forcebox label {clear: none; margin-top: 3px; min-width: 0px !important; }
+.rowlayout_forcebox {margin-top: 2px; float: left; clear: right;}
