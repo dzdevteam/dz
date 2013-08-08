@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor>
+  <title><![CDATA[DZCore]]></title>
+  <parser>
+	  <default-package-name><![CDATA[DZCore]]></default-package-name>
+      <target>.</target>
+  </parser>
+  <transformer>
+    <target>.</target>
+  </transformer>
+  <files>
+	<directory>/home/herop-kde/public_html/joomla/templates/dz/core/</directory>
+	<ignore>*/fields/*</ignore>
+	<ignore>*/includes/*</ignore>
+	<ignore>*/utilities/*</ignore>
+  </files>
+</phpdocumentor>
+ 

@@ -1,0 +1,735 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>DZCore » \DZ</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">DZCore</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/DZCore.html"><i class="icon-folder-open"></i> DZCore</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">27</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method___construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method_addDomReadyScript" title="addDomReadyScript :: Add script into document head and auto connect it with domready event of the document."><span class="description">Add script into document head and auto connect it with domready event of the document.</span><pre>addDomReadyScript()</pre></a></li>
+<li class="method public "><a href="#method_addFilter" title="addFilter :: Shortcut for filtering methods of the variable __filter"><span class="description">Shortcut for filtering methods of the variable __filter</span><pre>addFilter()</pre></a></li>
+<li class="method public "><a href="#method_addInlineScript" title="addInlineScript :: Directly add some javascript code into the head of the document"><span class="description">Directly add some javascript code into the head of the document</span><pre>addInlineScript()</pre></a></li>
+<li class="method public "><a href="#method_addInlineStyle" title="addInlineStyle :: Directly add some stylesheet code into the head of the document."><span class="description">Directly add some stylesheet code into the head of the document.</span><pre>addInlineStyle()</pre></a></li>
+<li class="method public "><a href="#method_addScript" title="addScript :: Enqueue javascript file with its priority"><span class="description">Enqueue javascript file with its priority</span><pre>addScript()</pre></a></li>
+<li class="method public "><a href="#method_addScripts" title="addScripts :: Enqueue groups of script file with the same priority"><span class="description">Enqueue groups of script file with the same priority</span><pre>addScripts()</pre></a></li>
+<li class="method public "><a href="#method_addStyle" title="addStyle :: Enqueue stylesheet file with its priority"><span class="description">Enqueue stylesheet file with its priority</span><pre>addStyle()</pre></a></li>
+<li class="method public "><a href="#method_addStyleMinify" title="addStyleMinify :: Auto minify a stylesheet file using PHP Minify library"><span class="description">Auto minify a stylesheet file using PHP Minify library</span><pre>addStyleMinify()</pre></a></li>
+<li class="method public "><a href="#method_addStyles" title="addStyles :: Enqueue group of stylesheet files with the same priority"><span class="description">Enqueue group of stylesheet files with the same priority</span><pre>addStyles()</pre></a></li>
+<li class="method public "><a href="#method_applyFilter" title="applyFilter :: Shortcut for filtering methods of the variable __filter"><span class="description">Shortcut for filtering methods of the variable __filter</span><pre>applyFilter()</pre></a></li>
+<li class="method public "><a href="#method_cleanPath" title="cleanPath :: A function to make sure we have a valid path"><span class="description">A function to make sure we have a valid path</span><pre>cleanPath()</pre></a></li>
+<li class="method public "><a href="#method_countModules" title="countModules :: Count number of modules for a position or expression"><span class="description">Count number of modules for a position or expression</span><pre>countModules()</pre></a></li>
+<li class="method public "><a href="#method_displayModules" title="displayModules :: Display individual module position"><span class="description">Display individual module position</span><pre>displayModules()</pre></a></li>
+<li class="method public "><a href="#method_displayModulesRow" title="displayModulesRow :: Display a row of related module positions"><span class="description">Display a row of related module positions</span><pre>displayModulesRow()</pre></a></li>
+<li class="method public "><a href="#method_finalize" title="finalize :: FINALIZER"><span class="description">FINALIZER</span><pre>finalize()</pre></a></li>
+<li class="method public "><a href="#method_get" title="get :: Alternative way to retrieve a parameter"><span class="description">Alternative way to retrieve a parameter</span><pre>get()</pre></a></li>
+<li class="method public "><a href="#method_getCurrentTemplate" title="getCurrentTemplate :: Get the name of the current template"><span class="description">Get the name of the current template</span><pre>getCurrentTemplate()</pre></a></li>
+<li class="method public "><a href="#method_getInstance" title="getInstance :: Get a template instance specified by its name."><span class="description">Get a template instance specified by its name.</span><pre>getInstance()</pre></a></li>
+<li class="method public "><a href="#method_includeLayout" title="includeLayout :: Include the layout file specified by its name"><span class="description">Include the layout file specified by its name</span><pre>includeLayout()</pre></a></li>
+<li class="method public "><a href="#method_init" title="init :: INITIALIZER"><span class="description">INITIALIZER</span><pre>init()</pre></a></li>
+<li class="method public "><a href="#method_rowExists" title="rowExists :: Check for any module-assigned positions in a row"><span class="description">Check for any module-assigned positions in a row</span><pre>rowExists()</pre></a></li>
+<li class="method public "><a href="#method_set" title="set :: Alternative way to set a parameter"><span class="description">Alternative way to set a parameter</span><pre>set()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="method protected "><a href="#method_getDefaultMenuItem" title="getDefaultMenuItem :: Get the default menu item's ID"><span class="description">Get the default menu item's ID</span><pre>getDefaultMenuItem()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property__domready_script" title="$_domready_script :: "><span class="description"></span><pre>$_domready_script</pre></a></li>
+<li class="property public "><a href="#property__scripts" title="$_scripts :: "><span class="description"></span><pre>$_scripts</pre></a></li>
+<li class="property public "><a href="#property__styles" title="$_styles :: "><span class="description"></span><pre>$_styles</pre></a></li>
+<li class="property public "><a href="#property__styles_available" title="$_styles_available :: "><span class="description"></span><pre>$_styles_available</pre></a></li>
+<li class="property public "><a href="#property__working_params" title="$_working_params :: "><span class="description"></span><pre>$_working_params</pre></a></li>
+<li class="property public "><a href="#property_basePath" title="$basePath :: "><span class="description"></span><pre>$basePath</pre></a></li>
+<li class="property public "><a href="#property_baseUrl" title="$baseUrl :: "><span class="description"></span><pre>$baseUrl</pre></a></li>
+<li class="property public "><a href="#property_currentMenuItem" title="$currentMenuItem :: "><span class="description"></span><pre>$currentMenuItem</pre></a></li>
+<li class="property public "><a href="#property_currentMenuTree" title="$currentMenuTree :: "><span class="description"></span><pre>$currentMenuTree</pre></a></li>
+<li class="property public "><a href="#property_currentUrl" title="$currentUrl :: "><span class="description"></span><pre>$currentUrl</pre></a></li>
+<li class="property public "><a href="#property_defaultMenuItem" title="$defaultMenuItem :: "><span class="description"></span><pre>$defaultMenuItem</pre></a></li>
+<li class="property public "><a href="#property_document" title="$document :: "><span class="description"></span><pre>$document</pre></a></li>
+<li class="property public "><a href="#property_instances" title="$instances :: Template instances"><span class="description"></span><pre>$instances</pre></a></li>
+<li class="property public "><a href="#property_language" title="$language :: "><span class="description"></span><pre>$language</pre></a></li>
+<li class="property public "><a href="#property_layoutPath" title="$layoutPath :: "><span class="description"></span><pre>$layoutPath</pre></a></li>
+<li class="property public "><a href="#property_positions" title="$positions :: "><span class="description"></span><pre>$positions</pre></a></li>
+<li class="property public "><a href="#property_session" title="$session :: "><span class="description"></span><pre>$session</pre></a></li>
+<li class="property public "><a href="#property_templateId" title="$templateId :: "><span class="description"></span><pre>$templateId</pre></a></li>
+<li class="property public "><a href="#property_templateName" title="$templateName :: "><span class="description"></span><pre>$templateName</pre></a></li>
+<li class="property public "><a href="#property_templatePath" title="$templatePath :: "><span class="description"></span><pre>$templatePath</pre></a></li>
+<li class="property public "><a href="#property_templateUrl" title="$templateUrl :: "><span class="description"></span><pre>$templateUrl</pre></a></li>
+<li class="property public "><a href="#property_template_prefix" title="$template_prefix :: "><span class="description"></span><pre>$template_prefix</pre></a></li>
+</ul>
+</li>
+<li class="nav-header protected">» Protected
+                    <ul><li class="property protected "><a href="#property___filter" title="$__filter :: Internal filter"><span class="description"></span><pre>$__filter</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants
+                    <ul><li class="constant  "><a href="#constant_DEFAULT_PRIORITY" title="DEFAULT_PRIORITY :: Default priority for newly added stylesheets or scripts"><span class="description">Default priority for newly added stylesheets or scripts</span><pre>DEFAULT_PRIORITY</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\DZ"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/DZ.html">DZ</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">The class which has the responsibility to provide API for
+building template based on DZ Framework</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="">DZTeam</a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/DZCore.html">DZCore</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(string $template_name) : <a href="../classes/DZ.html">\DZ</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This will initialize the class when it is declared the first time.
+Some helper variables will be set and an internal filter for this
+class will also be created.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$template_name</h4>
+<code>string</code><p>(optional) The name of the template which we want to build by this class. DEFAULT: null</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/DZ.html">\DZ</a></code></div>
+</div></div>
+</div>
+<a id="method_addDomReadyScript"></a><div class="element clickable method public method_addDomReadyScript" data-toggle="collapse" data-target=".method_addDomReadyScript .collapse">
+<h2>Add script into document head and auto connect it with domready event of the document.</h2>
+<pre>addDomReadyScript(string $js) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$js</h4>
+<code>string</code><p>Some javascript code</p></div>
+</div></div>
+</div>
+<a id="method_addFilter"></a><div class="element clickable method public method_addFilter" data-toggle="collapse" data-target=".method_addFilter .collapse">
+<h2>Shortcut for filtering methods of the variable __filter</h2>
+<pre>addFilter($filterName, $filterFunc) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="dzfilter.class.html#%5CDZFilter::addFilter()">\DZFilter::addFilter()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="dzfilter.class.html#%5CDZFilter::applyFilter()">\DZFilter::applyFilter()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$filterName</h4></div>
+<div class="subelement argument"><h4>$filterFunc</h4></div>
+</div></div>
+</div>
+<a id="method_addInlineScript"></a><div class="element clickable method public method_addInlineScript" data-toggle="collapse" data-target=".method_addInlineScript .collapse">
+<h2>Directly add some javascript code into the head of the document</h2>
+<pre>addInlineScript(string $js) : \JDocument | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$js</h4>
+<code>string</code><p>Some JS code</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\JDocument</code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_addInlineStyle"></a><div class="element clickable method public method_addInlineStyle" data-toggle="collapse" data-target=".method_addInlineStyle .collapse">
+<h2>Directly add some stylesheet code into the head of the document.</h2>
+<pre>addInlineStyle(string $css) : \JDocument | null</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If the document is FINALIZED, this function will no longer have any effect.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$css</h4>
+<code>string</code><p>(optional) Some stylesheet code</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>\JDocument</code><code>null</code>
+</div>
+</div></div>
+</div>
+<a id="method_addScript"></a><div class="element clickable method public method_addScript" data-toggle="collapse" data-target=".method_addScript .collapse">
+<h2>Enqueue javascript file with its priority</h2>
+<pre>addScript(string $file, int $priority) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code><p>Full URL of the javascript file</p></div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code><p>(optional) Lower value means higher priority. i.e The file will be added first.
+ DEFAULT: DZ::DEFAULT_PRIORITY</p>
+</div>
+</div></div>
+</div>
+<a id="method_addScripts"></a><div class="element clickable method public method_addScripts" data-toggle="collapse" data-target=".method_addScripts .collapse">
+<h2>Enqueue groups of script file with the same priority</h2>
+<pre>addScripts(array $scripts, int $priority) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$scripts</h4>
+<code>array</code><p>Array of script files' paths</p>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code><p>Priority of the group</p></div>
+</div></div>
+</div>
+<a id="method_addStyle"></a><div class="element clickable method public method_addStyle" data-toggle="collapse" data-target=".method_addStyle .collapse">
+<h2>Enqueue stylesheet file with its priority</h2>
+<pre>addStyle(string $file, int $priority) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code><p>Full URL of the stylesheet</p></div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code><p>(optional) Lower value mean higher priority, i.e The CSS file will be added first.
+ DEFAULT: DZ::DEFAULT_PRIORITY</p>
+</div>
+</div></div>
+</div>
+<a id="method_addStyleMinify"></a><div class="element clickable method public method_addStyleMinify" data-toggle="collapse" data-target=".method_addStyleMinify .collapse">
+<h2>Auto minify a stylesheet file using PHP Minify library</h2>
+<pre>addStyleMinify(string $relPath) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Example usage:</p></div>
+<table class="table table-bordered">
+<tr>
+<th>code</th>
+<td>// An instance of the core class
+  global $dz;
+  // Get the relative path of the template
+  $tplRelPath = JUri::base(true).'/templates/'.$dz->templateName;
+  // Add style
+  $dz->addStyleMinify($tplRelPath.'/css-compiled/bootstrap.css');</td>
+</tr>
+<tr>
+<th>endcode</th>
+<td></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$relPath</h4>
+<code>string</code><p>Relative path (compare to root) of the file</p>
+</div>
+</div></div>
+</div>
+<a id="method_addStyles"></a><div class="element clickable method public method_addStyles" data-toggle="collapse" data-target=".method_addStyles .collapse">
+<h2>Enqueue group of stylesheet files with the same priority</h2>
+<pre>addStyles(array $styles, int $priority) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$styles</h4>
+<code>array</code><p>Array of stylesheet file's paths</p>
+</div>
+<div class="subelement argument">
+<h4>$priority</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a id="method_applyFilter"></a><div class="element clickable method public method_applyFilter" data-toggle="collapse" data-target=".method_applyFilter .collapse">
+<h2>Shortcut for filtering methods of the variable __filter</h2>
+<pre>applyFilter($content, $filterName) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="dzfilter.class.html#%5CDZFilter::addFilter()">\DZFilter::addFilter()</a></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="dzfilter.class.html#%5CDZFilter::applyFilter()">\DZFilter::applyFilter()</a></td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$content</h4></div>
+<div class="subelement argument"><h4>$filterName</h4></div>
+</div></div>
+</div>
+<a id="method_cleanPath"></a><div class="element clickable method public method_cleanPath" data-toggle="collapse" data-target=".method_cleanPath .collapse">
+<h2>A function to make sure we have a valid path</h2>
+<pre>cleanPath(string $path) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>Path to be cleaned</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$path
+ Cleaned path</div>
+</div></div>
+</div>
+<a id="method_countModules"></a><div class="element clickable method public method_countModules" data-toggle="collapse" data-target=".method_countModules .collapse">
+<h2>Count number of modules for a position or expression</h2>
+<pre>countModules(string $condition) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Refer to JDocumentHTML documentation for more details</p></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="">JDocumentHTML Documentation</a></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$condition</h4>
+<code>string</code><p>Position name or Expression</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The number of modules available in that position</div>
+</div></div>
+</div>
+<a id="method_displayModules"></a><div class="element clickable method public method_displayModules" data-toggle="collapse" data-target=".method_displayModules .collapse">
+<h2>Display individual module position</h2>
+<pre>displayModules(string $position, int $span, bool $force, string $style) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$position</h4>
+<code>string</code><p>Position name</p></div>
+<div class="subelement argument">
+<h4>$span</h4>
+<code>int</code><p>(optional) The span width of div wrapper for current position.
+ If equals to 0, there will be no div wrapper around the position.
+ DEFAULT: 0</p>
+</div>
+<div class="subelement argument">
+<h4>$force</h4>
+<code>bool</code><p>(optional) Still creates the div wrapper if there's no module assigned
+ to current position (but does not when span width is 0).
+ DEFAULT: FALSE</p>
+</div>
+<div class="subelement argument">
+<h4>$style</h4>
+<code>string</code><p>(optional) Specific style for all modules in this position.
+ DEFAULT: "dz".</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$html
+ HTML code of the modules</div>
+</div></div>
+</div>
+<a id="method_displayModulesRow"></a><div class="element clickable method public method_displayModulesRow" data-toggle="collapse" data-target=".method_displayModulesRow .collapse">
+<h2>Display a row of related module positions</h2>
+<pre>displayModulesRow(string $prefix, string $class, $style, boolean $forceoverride) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$prefix</h4>
+<code>string</code><p>All positions with this prefix will be display.
+ The number of positions will be determine from params.</p></div>
+<div class="subelement argument">
+<h4>$class</h4>
+<code>string</code><p>(optional) Custom class for the row.
+ DEFAULT: "".</p>
+</div>
+<div class="subelement argument"><h4>$style</h4></div>
+<div class="subelement argument">
+<h4>$forceoverride</h4>
+<code>boolean</code><p>(optional) This will override the "Force Position" settings from template's params.
+ DEFAULT: NULL (not set)</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>$html
+ HTML code of the row</div>
+</div></div>
+</div>
+<a id="method_finalize"></a><div class="element clickable method public method_finalize" data-toggle="collapse" data-target=".method_finalize .collapse">
+<h2>FINALIZER</h2>
+<pre>finalize() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>This method will do the final work for the stylesheet and javascript functions, i.e actually put
+js and css into the document head.</p>
+
+<p>The document will be in finalized state after this step, i.e all stylesheet and javascript functions
+will no longer have effect after running this methods.</p></div></div></div>
+</div>
+<a id="method_get"></a><div class="element clickable method public method_get" data-toggle="collapse" data-target=".method_get .collapse">
+<h2>Alternative way to retrieve a parameter</h2>
+<pre>get(string $param, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$param</h4>
+<code>string</code><p>Parameter's name</p>
+</div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>(optional) Default value if the parameter is not set. DEFAULT: null</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The value of the parameter</div>
+</div></div>
+</div>
+<a id="method_getCurrentTemplate"></a><div class="element clickable method public method_getCurrentTemplate" data-toggle="collapse" data-target=".method_getCurrentTemplate .collapse">
+<h2>Get the name of the current template</h2>
+<pre>getCurrentTemplate() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a id="method_getInstance"></a><div class="element clickable method public method_getInstance" data-toggle="collapse" data-target=".method_getInstance .collapse">
+<h2>Get a template instance specified by its name.</h2>
+<pre>getInstance(string $template_name) : <a href="../classes/DZ.html">\DZ</a></pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Automatically create a template instance if it didn't
+exists.</p></div>
+<table class="table table-bordered"><tr>
+<th>static</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$template_name</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/DZ.html">\DZ</a></code></div>
+</div></div>
+</div>
+<a id="method_includeLayout"></a><div class="element clickable method public method_includeLayout" data-toggle="collapse" data-target=".method_includeLayout .collapse">
+<h2>Include the layout file specified by its name</h2>
+<pre>includeLayout(string $layout) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$layout</h4>
+<code>string</code><p>Layout file's name (no '.php' at the end)</p>
+</div>
+</div></div>
+</div>
+<a id="method_init"></a><div class="element clickable method public method_init" data-toggle="collapse" data-target=".method_init .collapse">
+<h2>INITIALIZER</h2>
+<pre>init() : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Get and set important variables. The other functions depend
+heavily on this one. Do not use any other methods without first
+running of this function.</p></div></div></div>
+</div>
+<a id="method_rowExists"></a><div class="element clickable method public method_rowExists" data-toggle="collapse" data-target=".method_rowExists .collapse">
+<h2>Check for any module-assigned positions in a row</h2>
+<pre>rowExists(string $rowName) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$rowName</h4>
+<code>string</code><p>The prefix of all the module positions displayed in this row.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>TRUE if at least 1 position has a module assigned to it</div>
+</div></div>
+</div>
+<a id="method_set"></a><div class="element clickable method public method_set" data-toggle="collapse" data-target=".method_set .collapse">
+<h2>Alternative way to set a parameter</h2>
+<pre>set(string $param, mixed $value) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$param</h4>
+<code>string</code><p>Parameter's name</p>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>Parameter's value</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The parameter's value which just be set</div>
+</div></div>
+</div>
+<a id="method_getDefaultMenuItem"></a><div class="element clickable method protected method_getDefaultMenuItem" data-toggle="collapse" data-target=".method_getDefaultMenuItem .collapse">
+<h2>Get the default menu item's ID</h2>
+<pre>getDefaultMenuItem() : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property__domready_script"> </a><div class="element clickable property public property__domready_script" data-toggle="collapse" data-target=".property__domready_script .collapse">
+<h2></h2>
+<pre>$_domready_script </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__scripts"> </a><div class="element clickable property public property__scripts" data-toggle="collapse" data-target=".property__scripts .collapse">
+<h2></h2>
+<pre>$_scripts </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__styles"> </a><div class="element clickable property public property__styles" data-toggle="collapse" data-target=".property__styles .collapse">
+<h2></h2>
+<pre>$_styles </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__styles_available"> </a><div class="element clickable property public property__styles_available" data-toggle="collapse" data-target=".property__styles_available .collapse">
+<h2></h2>
+<pre>$_styles_available </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property__working_params"> </a><div class="element clickable property public property__working_params" data-toggle="collapse" data-target=".property__working_params .collapse">
+<h2></h2>
+<pre>$_working_params </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_basePath"> </a><div class="element clickable property public property_basePath" data-toggle="collapse" data-target=".property_basePath .collapse">
+<h2></h2>
+<pre>$basePath </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_baseUrl"> </a><div class="element clickable property public property_baseUrl" data-toggle="collapse" data-target=".property_baseUrl .collapse">
+<h2></h2>
+<pre>$baseUrl </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentMenuItem"> </a><div class="element clickable property public property_currentMenuItem" data-toggle="collapse" data-target=".property_currentMenuItem .collapse">
+<h2></h2>
+<pre>$currentMenuItem </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentMenuTree"> </a><div class="element clickable property public property_currentMenuTree" data-toggle="collapse" data-target=".property_currentMenuTree .collapse">
+<h2></h2>
+<pre>$currentMenuTree </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_currentUrl"> </a><div class="element clickable property public property_currentUrl" data-toggle="collapse" data-target=".property_currentUrl .collapse">
+<h2></h2>
+<pre>$currentUrl </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_defaultMenuItem"> </a><div class="element clickable property public property_defaultMenuItem" data-toggle="collapse" data-target=".property_defaultMenuItem .collapse">
+<h2></h2>
+<pre>$defaultMenuItem </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_document"> </a><div class="element clickable property public property_document" data-toggle="collapse" data-target=".property_document .collapse">
+<h2></h2>
+<pre>$document : \JDocumentHTML</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_instances"> </a><div class="element clickable property public property_instances" data-toggle="collapse" data-target=".property_instances .collapse">
+<h2></h2>
+<pre>$instances </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Contain all the template instances created by this class</p></div>
+<table class="table table-bordered"><tr>
+<th>type</th>
+<td>DZ[]</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_language"> </a><div class="element clickable property public property_language" data-toggle="collapse" data-target=".property_language .collapse">
+<h2></h2>
+<pre>$language </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_layoutPath"> </a><div class="element clickable property public property_layoutPath" data-toggle="collapse" data-target=".property_layoutPath .collapse">
+<h2></h2>
+<pre>$layoutPath </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_positions"> </a><div class="element clickable property public property_positions" data-toggle="collapse" data-target=".property_positions .collapse">
+<h2></h2>
+<pre>$positions </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_session"> </a><div class="element clickable property public property_session" data-toggle="collapse" data-target=".property_session .collapse">
+<h2></h2>
+<pre>$session </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_templateId"> </a><div class="element clickable property public property_templateId" data-toggle="collapse" data-target=".property_templateId .collapse">
+<h2></h2>
+<pre>$templateId </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_templateName"> </a><div class="element clickable property public property_templateName" data-toggle="collapse" data-target=".property_templateName .collapse">
+<h2></h2>
+<pre>$templateName </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_templatePath"> </a><div class="element clickable property public property_templatePath" data-toggle="collapse" data-target=".property_templatePath .collapse">
+<h2></h2>
+<pre>$templatePath </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_templateUrl"> </a><div class="element clickable property public property_templateUrl" data-toggle="collapse" data-target=".property_templateUrl .collapse">
+<h2></h2>
+<pre>$templateUrl </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_template_prefix"> </a><div class="element clickable property public property_template_prefix" data-toggle="collapse" data-target=".property_template_prefix .collapse">
+<h2></h2>
+<pre>$template_prefix </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property___filter"> </a><div class="element clickable property protected property___filter" data-toggle="collapse" data-target=".property___filter .collapse">
+<h2></h2>
+<pre>$__filter : <a href="../classes/DZFilter.html">\DZFilter</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_DEFAULT_PRIORITY"> </a><div class="element clickable constant  constant_DEFAULT_PRIORITY" data-toggle="collapse" data-target=".constant_DEFAULT_PRIORITY .collapse">
+<h2>Default priority for newly added stylesheets or scripts</h2>
+<pre>DEFAULT_PRIORITY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2012-12-05T11:41:42+07:00.<br></footer></div>
+</div>
+</body>
+</html>
