@@ -12,6 +12,10 @@ define('MINIFY_MIN_DIR', dirname(__FILE__));
 // load config
 require MINIFY_MIN_DIR . '/config.php';
 
+if (isset($_GET['test'])) {
+    include MINIFY_MIN_DIR . '/config-test.php';
+}
+
 require "$min_libPath/Minify/Loader.php";
 Minify_Loader::register();
 

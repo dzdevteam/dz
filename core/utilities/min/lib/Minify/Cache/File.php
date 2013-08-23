@@ -87,7 +87,7 @@ class Minify_Cache_File {
         }
     }
     
-    /**
+	/**
      * Fetch the cached content
      *
      * @param string $id cache id (e.g. a filename)
