@@ -28,10 +28,13 @@
         <folder>html</folder>
         <folder>img</folder>
         <folder>js</folder>
-        <folder>language</folder>
         <folder>layouts</folder>
         <folder>less</folder>
     </files>
+    <languages>
+        <language tag="en-GB">language/en-GB.tpl_dz.ini</language>
+        <language tag="en-GB">language/en-GB.tpl_dz.sys.ini</language>
+    </languages>
     <config>
         <fields name="params" addfieldpath="/templates/dz/core/fields/">
             <fieldset name="basic">
