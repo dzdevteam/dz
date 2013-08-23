@@ -1,38 +1,38 @@
 <?php
 /**
- * @version		$Id: default_component.php 21322 2011-05-11 01:10:29Z dextercowley $
- * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @version     $Id: default_component.php 21322 2011-05-11 01:10:29Z dextercowley $
+ * @package     Joomla.Site
+ * @subpackage  mod_menu
+ * @copyright   Copyright (C) 2005 - 2011 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 // No direct access.
 defined('_JEXEC') or die;
 
-	// Note. It is important to remove spaces between elements.
+    // Note. It is important to remove spaces between elements.
 $class = $item->anchor_css ? 'class="'.$item->anchor_css.'" ' : '';
 $title = $item->anchor_title ? 'title="'.$item->anchor_title.'" ' : '';
 if ($item->menu_image) {
-		$item->params->get('menu_text', 1 ) ?
-		$linktype = '<img src="'.$item->menu_image.'" alt="'.$item->title.'" title="'.$item->title.'"/><span>'.$item->title.'</span> ' :
-		$linktype = '<img src="'.$item->menu_image.'" alt="'.$item->title.'" title="'.$item->title.'" />';
+        $item->params->get('menu_text', 1 ) ?
+        $linktype = '<img src="'.$item->menu_image.'" alt="'.$item->title.'" title="'.$item->title.'"/><span>'.$item->title.'</span> ' :
+        $linktype = '<img src="'.$item->menu_image.'" alt="'.$item->title.'" title="'.$item->title.'" />';
 }
 else { $linktype = '<span>'.$item->title.'</span>';
 }
 
 switch ($item->browserNav) :
-	default:
-	case 0:
+    default:
+    case 0:
 ?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" <?php echo $title; ?>><?php echo $linktype; ?><?php if( $item->note) :?><em><?php echo $item->note;?></em><?php endif;?></a><?php
-		break;
-	case 1:
-	// _blank
+        break;
+    case 1:
+    // _blank
 ?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" target="_blank" <?php echo $title; ?>><?php echo $linktype; ?><?php if( $item->note) :?><em><?php echo $item->note;?></em><?php endif;?></a><?php
-		break;
-	case 2:
-	// window.open
+        break;
+    case 2:
+    // window.open
 ?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;" <?php echo $title; ?>><?php echo $linktype; ?><?php if( $item->note) :?><em><?php echo $item->note;?></em><?php endif;?></a>
 <?php
-		break;
+        break;
 endswitch; ?>

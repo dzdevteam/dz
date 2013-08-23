@@ -19,33 +19,33 @@ defined('JPATH_BASE') or die();
  */
 class DZLoader
 {
-	/**
-	 * Loads a class from specified directories.
-	 *
-	 * @param string $filePath    
-	 *  The class name to look for ( dot notation ).
-	 *
-	 * @return void
-	 */
-	public static function import($filePath)
-	{
-		static $paths, $base;
+    /**
+     * Loads a class from specified directories.
+     *
+     * @param string $filePath    
+     *  The class name to look for ( dot notation ).
+     *
+     * @return void
+     */
+    public static function import($filePath)
+    {
+        static $paths, $base;
 
-		if (!isset($paths)) {
-			$paths = array();
-		}
+        if (!isset($paths)) {
+            $paths = array();
+        }
 
-		if (!isset($base)) {
-			$base = realpath(dirname(__FILE__) . '/..');
-		}
+        if (!isset($base)) {
+            $base = realpath(dirname(__FILE__) . '/..');
+        }
 
-		if (!isset($paths[$filePath])) {
-			$parts            = explode('.', $filePath);
-			$classname        = array_pop($parts);
-			$path             = str_replace('.', '/', $filePath);
-			$rs               = include($base . '/' . $path . '.class.php');
-			$paths[$filePath] = $rs;
-		}
-		return $paths[$filePath];
-	}
+        if (!isset($paths[$filePath])) {
+            $parts            = explode('.', $filePath);
+            $classname        = array_pop($parts);
+            $path             = str_replace('.', '/', $filePath);
+            $rs               = include($base . '/' . $path . '.class.php');
+            $paths[$filePath] = $rs;
+        }
+        return $paths[$filePath];
+    }
 }

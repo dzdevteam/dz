@@ -1,17 +1,17 @@
 <?php 
 /**
- * @package		DZ Joomla 2.5
- * @subpackage	mod_menu
- * @layout		default
- * @version		1.0
- * @date		10/2012
+ * @package     DZ Joomla 2.5
+ * @subpackage  mod_menu
+ * @layout      default
+ * @version     1.0
+ * @date        10/2012
  */
 defined('_JEXEC') or die; 
 $lastdeeper = false;
 $currentitemcount = 0;
 ?>
 <div class="inner mod-menu">
-	<ul class="nav"<?php
+    <ul class="nav"<?php
             $tag = '';
             if ($params->get('tag_id')!=NULL) {
                 $tag = $params->get('tag_id').'';
@@ -24,9 +24,9 @@ $currentitemcount = 0;
                 $class .= 'current ';
             }
         
-            if (	$item->type == 'alias' &&
+            if (    $item->type == 'alias' &&
                     in_array($item->params->get('aliasoptions'),$path)
-                ||	in_array($item->id, $path)) {
+                ||  in_array($item->id, $path)) {
               $class .= 'active ';
             }
                 $currentitemcount ++;
@@ -80,7 +80,7 @@ $currentitemcount = 0;
             }
             // The next item is on the same level.
             else {
-                echo '</li>';}	
+                echo '</li>';}  
         endforeach; ?>
         </ul>
 </div>

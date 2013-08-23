@@ -94,7 +94,7 @@ class Minify_Cache_Memcache {
             : '';
     }
     
-	/**
+    /**
      * Fetch the cached content
      *
      * @param string $id cache id
@@ -116,7 +116,7 @@ class Minify_Cache_Memcache {
     private $_data = null;
     private $_id = null;
     
-	/**
+    /**
      * Fetch data and timestamp from memcache, store in instance
      * 
      * @param string $id

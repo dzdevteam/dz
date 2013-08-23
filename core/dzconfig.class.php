@@ -20,15 +20,15 @@ defined('JPATH_BASE') or die;
  */
 abstract class DZConfig
 {
-	/** @name Main layout pre-configuration
-	 * Configuration constants for main layout
-	 */
-	///@{ 
-	const SIDEBAR_COMP_SIDEBAR_SIDEBAR 	= 4;
-	const COMP_SIDEBAR_SIDEBAR			= 3;
-	const SIDEBAR_COMP_SIDEBAR			= 13;
-	const SIDEBAR_COMP					= 2;
-	const COMP_SIDEBAR					= 12;
-	const COMP							= 1;
-	///@}
+    /** @name Main layout pre-configuration
+     * Configuration constants for main layout
+     */
+    ///@{ 
+    const SIDEBAR_COMP_SIDEBAR_SIDEBAR  = 4;
+    const COMP_SIDEBAR_SIDEBAR          = 3;
+    const SIDEBAR_COMP_SIDEBAR          = 13;
+    const SIDEBAR_COMP                  = 2;
+    const COMP_SIDEBAR                  = 12;
+    const COMP                          = 1;
+    ///@}
 }
