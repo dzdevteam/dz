@@ -12,6 +12,7 @@
 defined('JPATH_BASE') or die();
 
 dz_import('core.dzfilter');
+dz_import('core.dzconfig');
 
 /**
  * The class which has the responsibility to provide API for 
@@ -84,7 +85,8 @@ class DZ
      * Store parameters, scripts and stylesheets of the template
      */
     ///@{
-    public $_working_params;
+    private $_working_params;
+    private $_preconfigs;
     public $_scripts = array();
     public $_domready_script = '';
     public $_styles = array();
@@ -128,6 +130,9 @@ class DZ
 
         $this->defaultMenuItem = $this->getDefaultMenuItem();
         $this->currentMenuItem = $this->defaultMenuItem;
+        
+        $reflector = new ReflectionClass('DZConfig');
+        $this->_preconfigs = $reflector->getConstants();
         
         // Initialize filter
         $this->__filter = new DZFilter();
@@ -237,7 +242,11 @@ class DZ
      */
     public function get($param, $default = null)
     {
-        return $this->_working_params->get($param, $default);
+        $result = $this->_working_params->get($param, null);
+        if ($result == null && isset($this->_preconfigs['PARAMS_'.strtoupper($param)]))
+            $result = $this->_preconfigs['PARAMS_'.strtoupper($param)];
+        
+        return ($result !== null) ? $result : $default;
     }
     
     /**
@@ -405,18 +414,27 @@ class DZ
      * Enqueue stylesheet file with its priority
      * 
      * @param string $file
-     *  Full URL of the stylesheet
+     *  URL of the stylesheet
+     * @param boolean $isRel
+     *  True to indicate that the file path is relative to the root URL
      * @param int $priority
      *  (optional) Lower value mean higher priority, i.e The CSS file will be added first.
      *  DEFAULT: DZ::DEFAULT_PRIORITY
      *  
      * @return void
      */
-    public function addStyle($file = '', $priority = self::DEFAULT_PRIORITY)
+    public function addStyle($file = '', $isRel = false, $priority = self::DEFAULT_PRIORITY)
     {
         if (is_array($file)) {
             $this->addStyles($file, $priority);
             return;
+        }
+        
+        if ($isRel) {
+            if ( (boolean) $this->get('autominify', 0) )
+                $file = $this->templateUrl.'/core/utilities/min?f='.$file;
+            else
+                $file = $this->baseUrl.$file;
         }
         
         $addit = true;
