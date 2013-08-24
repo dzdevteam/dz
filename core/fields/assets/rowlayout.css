@@ -50,6 +50,7 @@
 .visual-table {
     width: 100%;
     max-width: 700px;
+    margin-bottom: 20px;
 }
 .visual-table td {
     width: 50%;
