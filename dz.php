@@ -141,9 +141,9 @@ if (!defined('DZ_VERSION')) {
             $html .= $before;
         
         if ( ($dz->get('modulesOverComp', 0) == 1 && $dz->countModules('component')))
-            $html .=    '<div class = "dz-component">'.$dz->displayModules("component", 0).'</div>';
+            $html .=    '<div class = "dz-component"><jdoc:include type="message" />'.$dz->displayModules("component", 0).'</div>';
         else
-            $html .= '<div class="dz-component"><jdoc:include type="component" /></div>';
+            $html .= '<div class="dz-component"><jdoc:include type="message" /><jdoc:include type="component" /></div>';
         
         $after =    $dz->displayModules("after", 0);
         if (!empty($after))
