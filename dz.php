@@ -8,7 +8,7 @@ if (!defined('DZ_VERSION')) {
     /**
      * @name DZ_VERSION
      */
-    define('DZ_VERSION', '1.3.0');
+    define('DZ_VERSION', '2.0.0');
 
     if (!defined('DS')) {
         define('DS', DIRECTORY_SEPARATOR);
