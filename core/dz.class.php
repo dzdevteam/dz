@@ -431,10 +431,20 @@ class DZ
         }
         
         if ($isRel) {
-            if ( (boolean) $this->get('autominify', 0) )
+            // Check for auto minify configuration
+            if ( (boolean) $this->get('autominify', 0) ) {
+                // Auto add slash into the head of the file path
+                if (strpos($file, '/') !== 0)
+                    $file = '/'.$file;
+                    
                 $file = $this->templateUrl.'/core/utilities/min?f='.$file;
-            else
+            } else {
+                // Auto remove the first slash in file path
+                if (strpos($file, '/') === 0)
+                    $file = substr($file, 1);
+                    
                 $file = $this->baseUrl.$file;
+            }
         }
         
         $addit = true;
@@ -463,30 +473,6 @@ class DZ
                 unset($this->_styles[$style_priority]);
             }
         }
-    }
-    
-    /**
-     * Auto minify a stylesheet file using PHP Minify library
-     * 
-     * Example usage:
-     * @code
-     *   // An instance of the core class
-     *   global $dz;
-     *   
-     *   // Get the relative path of the template 
-     *   $tplRelPath = JUri::base(true).'/templates/'.$dz->templateName;
-     *   
-     *   // Add style 
-     *   $dz->addStyleMinify($tplRelPath.'/css-compiled/bootstrap.css');
-     * @endcode
-     * 
-     * @param string $relPath
-     *  Relative path (compare to root) of the file
-     */
-    public function addStyleMinify($relPath)
-    {
-        $minifyPath = $this->templateUrl.'/core/utilities/min';
-        $this->addStyle($minifyPath.'?f='.$relPath);    
     }
     
     /**

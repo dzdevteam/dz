@@ -36,6 +36,6 @@ abstract class DZConfig
      * Default configuration for params
      */
      ///@{
-     const PARAMS_AUTOMINIFY = false; 
+     const PARAMS_AUTOMINIFY = true; 
      ///@}
 }

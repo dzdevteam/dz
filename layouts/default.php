@@ -8,14 +8,13 @@
 global $dz;
 
 // Add styles
-$tplRelPath = JUri::base(true).'/templates/'.$dz->templateName;
-$dz->addStyleMinify($tplRelPath.'/css-compiled/bootstrap.css');
-$dz->addStyleMinify($tplRelPath.'/css/mainstyle.css');
+$dz->addStyle($dz->templateUrl.'/css-compiled/bootstrap.css', true);
+$dz->addStyle($dz->templateUrl.'/css/mainstyle.css', true);
 $color = $dz->get('colorizeCSS', -1);
 if ($color != -1)
-    $dz->addStyleMinify($tplRelPath.'/css/colors/'.$color);
+    $dz->addStyle($dz->templateUrl.'/css/colors/'.$color, true);
 if ($dz->get('responsive', 1))
-    $dz->addStyleMinify($tplRelPath.'/css-compiled/responsive.css');
+    $dz->addStyle($dz->templateUrl.'/css-compiled/responsive.css', true);
 
 // Add scripts
 JHtml::_('bootstrap.framework');
