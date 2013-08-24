@@ -415,8 +415,10 @@ class DZ
      * 
      * @param string $file
      *  URL of the stylesheet
+     *
      * @param boolean $isRel
      *  True to indicate that the file path is relative to the root URL
+     *
      * @param int $priority
      *  (optional) Lower value mean higher priority, i.e The CSS file will be added first.
      *  DEFAULT: DZ::DEFAULT_PRIORITY
@@ -511,7 +513,10 @@ class DZ
      * Enqueue javascript file with its priority
      * 
      * @param string $file
-     *  Full URL of the javascript file
+     *  URL of the stylesheet
+     *
+     * @param boolean $isRel
+     *  True to indicate that the file path is relative to the root URL
      *  
      * @param int $priority
      *  (optional) Lower value means higher priority. i.e The file will be added first.
@@ -519,11 +524,28 @@ class DZ
      *  
      * @return void
      */
-    public function addScript($file = '', $priority = self::DEFAULT_PRIORITY)
+    public function addScript($file = '', $isRel = false, $priority = self::DEFAULT_PRIORITY)
     {
         if (is_array($file)) {
             $this->addScripts($file);
             return;
+        }
+        
+        if ($isRel) {
+            // Check for auto minify configuration
+            if ( (boolean) $this->get('autominify', 0) ) {
+                // Auto add slash into the head of the file path
+                if (strpos($file, '/') !== 0)
+                    $file = '/'.$file;
+                    
+                $file = $this->templateUrl.'/core/utilities/min?f='.$file;
+            } else {
+                // Auto remove the first slash in file path
+                if (strpos($file, '/') === 0)
+                    $file = substr($file, 1);
+                    
+                $file = $this->baseUrl.$file;
+            }
         }
         
         $addit = true;
