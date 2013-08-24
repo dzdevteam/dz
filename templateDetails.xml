@@ -81,7 +81,7 @@
                     name="compactHome"
                     label="DZ_FIELD_OTHER_COMPACT_HOME_LABEL"
                     description="DZ_FIELD_OTHER_COMPACT_HOME_DESC"
-                    type="radio"
+                    type="radio" class="btn-group"
                     default="0">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
@@ -90,7 +90,7 @@
                     name="modulesOverComp"
                     label="DZ_FIELD_OTHER_MOD_OVER_COMP_LABEL"
                     description="DZ_FIELD_OTHER_MOD_OVER_COMP_DESC"
-                    type="radio"
+                    type="radio" class="btn-group"
                     default="0">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
@@ -99,7 +99,7 @@
                     name="responsive"
                     label="DZ_FIELD_OTHER_RESPONSIVE_LABEL"
                     description="DZ_FIELD_OTHER_RESPONSIVE_DESC"
-                    type="radio"
+                    type="radio" class="btn-group"
                     default="1">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
