@@ -5,7 +5,7 @@ require_once('dz.php');
 $dz->init();
 ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $dz->language; ?>" lang="<?php echo $dz->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 <?php if ($dz->get('responsive') == 1) : ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
