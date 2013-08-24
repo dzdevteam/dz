@@ -234,13 +234,13 @@
                 <field
                     name="textColor"
                     default="#333"
-                    type="text"
+                    type="color"
                     size="40"
                     label="DZ_FIELD_VARIABLE_TEXTCOLOR" />
                 <field
                     name="linkColor"
                     default="#08c"
-                    type="text"
+                    type="color"
                     size="40"
                     label="DZ_FIELD_VARIABLE_LINKCOLOR" />
                 <field
