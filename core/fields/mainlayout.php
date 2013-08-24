@@ -27,8 +27,8 @@ class JFormFieldMainLayout extends JFormField
         list($mode, $value, $force, $expandMain) = explode(",", $this->value);
         $script = 'initMainConfig("'.$id.'", '.$mode.', "'.$value.'", '.$force.', '.$expandMain.');';
         $doc->addScriptDeclaration($script);
-        $html = '<div style="clear:both"></div>';
-        $html .= '<table width="100%"><tr><td width="50%">';
+        $html = '';
+        $html .= '<table class="visual-table"><tr><td>';
         $html .= '<div id="'.$id.'_visual" class="visual-container">
                     <div class="visual-mini grid-2">a</div>
                     <div class="visual-mini grid-2">b</div>
@@ -37,9 +37,9 @@ class JFormFieldMainLayout extends JFormField
                     <div class="visual-mini grid-2">e</div>
                     <div class="visual-mini grid-2">f</div>
                 </div>';
-        $html .= '</td><td width="50%">';
-        $html .= '<div class="rowlayout_forcebox"><input type="checkbox" id="'.$id.'_force" onchange="updateMainInput(\''.$id.'\'); $(\''.$id.'_exMain\').set(\'checked\', false);" /><label for="'.$id.'_force">Force Position</label></div><br />';
-        $html .= '<div class="rowlayout_forcebox"><input type="checkbox" id="'.$id.'_exMain" onchange="updateMainInput(\''.$id.'\'); $(\''.$id.'_force\').set(\'checked\', false);" /><label for="'.$id.'_exMain">Autoexpand Main</label></div>';
+        $html .= '</td><td>';
+        $html .= '<div class="rowlayout_forcebox"><label for="'.$id.'_force"><input type="checkbox" id="'.$id.'_force" onchange="updateMainInput(\''.$id.'\'); $(\''.$id.'_exMain\').set(\'checked\', false);" />&nbsp;Force Position</label></div>';
+        $html .= '<div class="rowlayout_forcebox"><label for="'.$id.'_exMain"><input type="checkbox" id="'.$id.'_exMain" onchange="updateMainInput(\''.$id.'\'); $(\''.$id.'_force\').set(\'checked\', false);" />&nbsp;Autoexpand Main</label></div>';
         $html .= '<select id="'.$id.'_rowcolumns" onchange="updateMainSlider(\''.$id.'\', this.value)">
                     <option value="4">'.JText::_('DZ_FIELD_MAINLAYOUT_SCSS').'</option>
                     <option value="3">'.JText::_('DZ_FIELD_MAINLAYOUT_CSS').'</option>
@@ -63,60 +63,5 @@ class JFormFieldMainLayout extends JFormField
         $id = str_replace('[', "", $id); $id = str_replace(']', "", $id);
         
         return $id;
-    }
-    
-    /**
-     * Method to get the field label markup.
-     *
-     * @return  string  The field label markup.
-     *
-     * @since   11.1
-     */
-    protected function getLabel()
-    {
-        // Initialise variables.
-        $label = '';
-    
-        if ($this->hidden)
-        {
-            return $label;
-        }
-    
-        // Get the label text from the XML element, defaulting to the element name.
-        $text = $this->element['label'] ? (string) $this->element['label'] : (string) $this->element['name'];
-        $text = $this->translateLabel ? JText::_($text) : $text;
-    
-        // Build the class for the label.
-        $class = !empty($this->description) ? 'hasTip' : '';
-        $class = $this->required == true ? $class . ' required' : $class;
-        $class = !empty($this->labelClass) ? $class . ' ' . $this->labelClass : $class;
-    
-        // Inject specific class for this
-        $class = $class . ' ' . 'rowlayout_label';
-    
-        // Add the opening label tag and main attributes attributes.
-        $label .= '<label id="' . $this->id . '-lbl" for="' . $this->id . '" class="' . $class . '"';
-    
-        // If a description is specified, use it to build a tooltip.
-        if (!empty($this->description))
-        {
-            $label .= ' title="'
-                    . htmlspecialchars(
-                            trim($text, ':') . '::' . ($this->translateDescription ? JText::_($this->description) : $this->description),
-                            ENT_COMPAT, 'UTF-8'
-                    ) . '"';
-        }
-    
-        // Add the label text and closing tag.
-        if ($this->required)
-        {
-            $label .= '>' . $text . '<span class="star">&#160;*</span></label>';
-        }
-        else
-        {
-            $label .= '>' . $text . '</label>';
-        }
-    
-        return $label;
     }
 }

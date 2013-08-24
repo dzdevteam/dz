@@ -46,6 +46,14 @@
     cursor: pointer;
 }
 
+
+.visual-table {
+    width: 100%;
+    max-width: 700px;
+}
+.visual-table td {
+    width: 50%;
+}
 .visual-main {
     background-color: #EEEEEE;
 }
@@ -58,7 +66,6 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
 .visual-container .grid-2 {
     width: 15%;
 }
@@ -91,4 +98,5 @@
 }
 
 .rowlayout_forcebox label {clear: none; margin-top: 3px; min-width: 0px !important; }
-.rowlayout_forcebox {margin-top: 2px; float: left; clear: right;}
+.rowlayout_forcebox label > input { margin-top: 0px; }
+.rowlayout_forcebox {margin-top: 2px; float: left; margin-right: 10px}
