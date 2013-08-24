@@ -18,9 +18,7 @@ if ($dz->get('responsive', 1))
     $dz->addStyleMinify($tplRelPath.'/css-compiled/responsive.css');
 
 // Add scripts
-$dz->addScript($dz->templateUrl.'/js/jquery-1.8.2.min.js');
-$dz->addInlineScript("jQuery.noConflict();");
-$dz->addScript($dz->templateUrl.'/js/bootstrap.min.js');
+JHtml::_('bootstrap.framework');
 ?>
 <div id="block-dz">
 <div class="container">
