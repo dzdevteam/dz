@@ -71,7 +71,7 @@
                 </field>
                 <field
                     name="logoPosition"
-                    type="moduleposition"
+                    type="position"
                     label="DZ_FIELD_LOGO_POSITION_LABEL"
                     description="DZ_FIELD_LOGO_POSITION_DESC"
                     />
@@ -262,7 +262,7 @@
                 <field
                     name="responsive-767px-max"
                     label="DZ_FIELD_RESPONSIVE_767MAX_LABEL"
-                    type="radio"
+                    type="radio" class="btn-group"
                     default="1">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
@@ -270,7 +270,7 @@
                 <field
                     name="responsive-768px-979px"
                     label="DZ_FIELD_RESPONSIVE_768-979_LABEL"
-                    type="radio"
+                    type="radio" class="btn-group"
                     default="1">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
@@ -278,7 +278,7 @@
                 <field
                     name="responsive-1200px-min"
                     label="DZ_FIELD_RESPONSIVE_1200MIN_LABEL"
-                    type="radio"
+                    type="radio" class="btn-group"
                     default="1">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
