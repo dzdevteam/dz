@@ -31,11 +31,4 @@ abstract class DZConfig
     const COMP_SIDEBAR                  = 12;
     const COMP                          = 1;
     ///@}
-    
-    /** @name Params configuration
-     * Default configuration for params
-     */
-     ///@{
-     const PARAMS_AUTOMINIFY = true; 
-     ///@}
 }

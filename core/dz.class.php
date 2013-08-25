@@ -242,11 +242,7 @@ class DZ
      */
     public function get($param, $default = null)
     {
-        $result = $this->_working_params->get($param, null);
-        if ($result == null && isset($this->_preconfigs['PARAMS_'.strtoupper($param)]))
-            $result = $this->_preconfigs['PARAMS_'.strtoupper($param)];
-        
-        return ($result !== null) ? $result : $default;
+        return $this->_working_params->get($param, $default);
     }
     
     /**
