@@ -1,0 +1,17 @@
+@import 'rowlayout.css';
+
+.visual-main {
+    background-color: #EEEEEE;
+}
+
+label.expandbox-label {
+    clear: none; 
+    margin-top: 3px; 
+    min-width: 0px !important; 
+    margin-top: 2px; 
+    float: left; 
+    margin-right: 10px
+}
+label.expandbox-label > input { 
+    margin-top: 0px; 
+}
