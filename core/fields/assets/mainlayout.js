@@ -126,7 +126,6 @@ jQuery(document).ready(function() {
                 update_visual_container();
             }
         }
-        $columnsselect.val(String($table.data('layout')).split('-').length); // Update the columns select on start up
         $columnsselect.on('change', columns_select_handler).trigger('change');
         
         /* ------- INITIALIZATION ------- */
