@@ -1,15 +1,8 @@
 <?php 
-include_once("core/includes/lessc.inc.php");
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-    <title>DZ LESS Compiler</title>
-</head>
-<body>
-<?php
+    header('Content-Type: application/json');
+    include_once("core/includes/lessc.inc.php");
+
     // DEBUG
-    echo '<pre>';
     if (isset($_GET['compile']))
         $method = $_GET['compile'];
     else if (isset($_POST['compile']))
@@ -17,7 +10,7 @@ include_once("core/includes/lessc.inc.php");
 
     if (empty($method) || ( count($method['variables']) != 8 && count($method['imports']) != 3))
     {
-        echo "Invalid Request!";
+        echo json_encode(array('status' => 'nok', 'message' => 'Invalid Request!'));
         return;
     }
     
@@ -51,11 +44,8 @@ include_once("core/includes/lessc.inc.php");
         $less->compileFile(dirname(__FILE__)."/less/bootstrap.less", $bootstrap);
         $less->compileFile(dirname(__FILE__)."/less/responsive.less", $responsive);
 
-        echo "Compile Successful!";
+        echo json_encode(array('status' => 'ok', 'message' => 'Compile Successful!'));
     } catch (exception $e) {
-        echo "Fatal Error: ".$e->getMessage();
+        echo json_encode(array('status' => 'nok', 'message' => $e->getMessage()));
     }
-    echo '</pre>';
 ?>
-</body>
-</html>
