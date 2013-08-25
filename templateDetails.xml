@@ -105,6 +105,15 @@
                     <option value="1">DZ_YES</option>
                 </field>
                 <field
+                    name="autominify"
+                    label="DZ_FIELD_OTHER_AUTOMINIFY_LABEL"
+                    description="DZ_FIELD_OTHER_AUTOMINIFY_DESC"
+                    type="radio" class="btn-group"
+                    default="1">
+                    <option value="0">DZ_NO</option>
+                    <option value="1">DZ_YES</option>
+                </field>
+                <field
                     name="colorizeCSS"
                     type="filelist"
                     default="-1"
