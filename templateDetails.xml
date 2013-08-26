@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade">
     <name>dz</name>
-    <creationDate>November 2012</creationDate>
+    <creationDate>July 2012</creationDate>
     <author>DZ Development Team</author>
     <authorEmail>dev@dezign.vn</authorEmail>
     <authorUrl>http://dezign.vn</authorUrl>
