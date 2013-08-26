@@ -4,7 +4,7 @@
  * 
  * @version dzfilter.class.php 2012-12-05
  * @author DZTeam http://dezign.vn
- * @copyright Copyright (C) 2012 DZ Creative Studio 
+ * @copyright Copyright (C) 2012 - 2013 DZ Creative Studio 
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  * 
  */
@@ -80,10 +80,10 @@ class DZFilter
      * filter function.
      * 
      * Example Usage:
-     * @code
+     * <code>
      *   // Replace all emoticon inside $content into image
      *   $filter->applyFilter($content, "emoticon");
-     * @endcode
+     * </code>
      * 
      * @param mixed $content
      *   The content variable which needs to be filtered. Can be of any type.

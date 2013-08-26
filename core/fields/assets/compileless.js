@@ -4,11 +4,12 @@ jQuery(document).ready(function() {
         var data = {
             compile: {
                 variables: {},
-                imports: {}
+                responsive: {},
+                components: []
             }
         },
             variables = ['baseFontSize', 'sansFontFamily', 'serifFontFamily', 'baseFontFamily', 'baseLineHeight', 'textColor', 'linkColor', 'linkColorHover'],
-            imports = ['responsive-767px-max', 'responsive-768px-979px', 'responsive-1200px-min'],
+            responsive = ['responsive-767px-max', 'responsive-768px-979px', 'responsive-1200px-min'],
             alert_tpl = '<div class="alert fade in"><a class="close" data-dismiss="alert" href="#">&times;</a></div>';
         
         // Prepare variables
@@ -16,10 +17,13 @@ jQuery(document).ready(function() {
             data.compile.variables[variables[i]] = jQuery('#jform_params_' + variables[i]).val();
         }
         
-        // Prepare imports
-        for (var i = 0; i < imports.length; i++) {
-            data.compile.imports[imports[i] + '.less'] = jQuery('input[name="jform[params][' + imports[i]+']"]:checked').val();
+        // Prepare responsive
+        for (var i = 0; i < responsive.length; i++) {
+            data.compile.responsive[responsive[i] + '.less'] = jQuery('input[name="jform[params][' + responsive[i]+']"]:checked').val();
         }
+        
+        // Prepare components
+        data.compile.components = jQuery('#jform_params_components').val();
         
         // Loading animation
         jQuery('#compile-result').html('<img src="../media/system/images/modal/spinner.gif" />');

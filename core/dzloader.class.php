@@ -4,7 +4,7 @@
  * 
  * @version dzloader.class.php 2012-12-05
  * @author DZTeam http://dezign.vn
- * @copyright Copyright (C) 2012 DZ Creative Studio
+ * @copyright Copyright (C) 2012 - 2013 DZ Creative Studio
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  *
  */

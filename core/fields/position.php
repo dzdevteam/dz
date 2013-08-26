@@ -1,4 +1,11 @@
 <?php
+/**
+ * Mimic the com_modules' position field
+ *
+ * @author DZTeam http://dezign.vn
+ * @copyright Copyright (C) 2012 - 2013 DZ Creative Studio 
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
 defined('JPATH_BASE') or die();
 
 jimport('joomla.html.html');

@@ -1,4 +1,11 @@
 <?php
+/**
+ * DZ Template init file using DZCore
+ *
+ * @author DZTeam http://dezign.vn
+ * @copyright Copyright (C) 2012 - 2013 DZ Creative Studio 
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
 defined('JPATH_BASE') or die();
 
 if (!defined('DZ_VERSION')) {

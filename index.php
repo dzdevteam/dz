@@ -1,4 +1,11 @@
 <?php
+/**
+ * The template index file
+ *
+ * @author DZTeam http://dezign.vn
+ * @copyright Copyright (C) 2012 - 2013 DZ Creative Studio 
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
 defined('_JEXEC') or die;
 require_once('dz.php');
 /** @var $dz DZ */

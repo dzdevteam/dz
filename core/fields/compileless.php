@@ -1,4 +1,11 @@
 <?php
+/**
+ * Render a button to compile bootstrap
+ *
+ * @author DZTeam http://dezign.vn
+ * @copyright Copyright (C) 2012 - 2013 DZ Creative Studio 
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ */
 
 defined('JPATH_BASE') or die();
 

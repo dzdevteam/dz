@@ -4,7 +4,7 @@
  * 
  * @version dz.class.php 2012-12-05
  * @author DZTeam http://dezign.vn
- * @copyright Copyright (C) 2012 DZ Creative Studio
+ * @copyright Copyright (C) 2012 -2013 DZ Creative Studio
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  *
  * @package DZCore
@@ -65,13 +65,10 @@ class DZ
     public $templateName;
     public $templateUrl;
     public $templatePath;
-    public $templateId;
-    public $layoutPath;
     public $defaultMenuItem;
     public $currentMenuItem;
     public $currentMenuTree;
-    public $template_prefix;
-    public $positions = array();
+    
     /**
      * @var JDocumentHTML
      */
@@ -81,16 +78,39 @@ class DZ
     public $currentUrl;
     ///@}
 
-    /** @name Private variables
+    /** @name Protected variables
      * Store parameters, scripts and stylesheets of the template
      */
     ///@{
-    private $_working_params;
-    private $_preconfigs;
-    public $_scripts = array();
-    public $_domready_script = '';
-    public $_styles = array();
-    public $_styles_available = array();
+    /**
+     * Store the application's parameters
+     * @var JRegistry
+     */
+    protected $_working_params;
+    
+    /**
+     * Store the added javascript
+     * @see DZ::addScript()
+     *
+     * @var array
+     */
+    protected $_scripts = array();
+    
+    /**
+     * Store the javascript which need to execute when the dom is ready
+     * @see DZ::addDomReadyScript()
+     *
+     * @var string
+     */
+    protected $_domready_script = '';
+    
+    /**
+     * Store the added style sheet
+     * @see DZ::addStyle()
+     *
+     * @var array
+     */
+    protected $_styles = array();
     ///@}
     
     /**
@@ -117,22 +137,22 @@ class DZ
         $doc            = JFactory::getDocument();
         $this->document =& $doc;
 
+        // Get template name
         if ($template_name == null) {
             $this->templateName = $this->getCurrentTemplate();
         } else {
             $this->templateName = $template_name;
         }
         
+        // Get path and URL for the template
         $this->basePath = $this->cleanPath(JPATH_ROOT);
         $this->templatePath        = $this->cleanPath(JPATH_ROOT . '/' . 'templates' . '/' . $this->templateName);
         $this->baseUrl             = JURI::root(true) . "/";
         $this->templateUrl         = $this->baseUrl . 'templates' . "/" . $this->templateName;
 
+        // Get the menu items
         $this->defaultMenuItem = $this->getDefaultMenuItem();
         $this->currentMenuItem = $this->defaultMenuItem;
-        
-        $reflector = new ReflectionClass('DZConfig');
-        $this->_preconfigs = $reflector->getConstants();
         
         // Initialize filter
         $this->__filter = new DZFilter();
@@ -144,7 +164,7 @@ class DZ
      * Get and set important variables. The other functions depend 
      * heavily on this one. Do not use any other methods without first 
      * running of this function. 
-     *
+     * @api
      * @return void
      */
     public function init()
@@ -156,7 +176,6 @@ class DZ
 
         define('DZ_INIT', "DZ_INIT");
 
-        //JHTML::_('behavior.mootools');
         $doc               = JFactory::getDocument();
         $this->document    =& $doc;
         $this->_working_params = $this->document->params;
@@ -231,7 +250,7 @@ class DZ
 
     /**
      * Alternative way to retrieve a parameter
-     * 
+     * @api
      * @param string $param
      *  Parameter's name
      * @param mixed $default
@@ -247,7 +266,7 @@ class DZ
     
     /**
      * Alternative way to set a parameter
-     * 
+     * @api
      * @param string $param
      *  Parameter's name
      * @param mixed $value
@@ -267,7 +286,7 @@ class DZ
     ///@{
     /**
      * Include the layout file specified by its name
-     * 
+     * @api
      * @param string $layout
      *  Layout file's name (no '.php' at the end)
      * 
@@ -297,7 +316,7 @@ class DZ
     
     /**
      * Display individual module position
-     * 
+     * @api
      * @param string $position 
      *  Position name
      * 
@@ -343,7 +362,7 @@ class DZ
     
     /**
      * Display a row of related module positions
-     * 
+     * @api
      * @param string $prefix
      *  All positions with this prefix will be display.
      *  The number of positions will be determine from params.
@@ -379,7 +398,7 @@ class DZ
     
     /**
      * Check for any module-assigned positions in a row
-     * 
+     * @api
      * @param string $rowName
      *  The prefix of all the module positions displayed in this row.
      *  
@@ -408,7 +427,7 @@ class DZ
     ///@{
     /**
      * Enqueue stylesheet file with its priority
-     * 
+     * @api
      * @param string $file
      *  URL of the stylesheet
      *
@@ -475,7 +494,7 @@ class DZ
     
     /**
      * Enqueue group of stylesheet files with the same priority
-     * 
+     * @api
      * @param array $styles
      *  Array of stylesheet file's paths
      * 
@@ -492,7 +511,7 @@ class DZ
      * Directly add some stylesheet code into the head of the document.
      * 
      * If the document is FINALIZED, this function will no longer have any effect.
-     * 
+     * @api
      * @param string $css
      *  (optional) Some stylesheet code 
      *
@@ -507,7 +526,7 @@ class DZ
     
     /**
      * Enqueue javascript file with its priority
-     * 
+     * @api
      * @param string $file
      *  URL of the stylesheet
      *
@@ -568,7 +587,7 @@ class DZ
     
     /**
      * Enqueue groups of script file with the same priority
-     * 
+     * @api
      * @param array $scripts
      *  Array of script files' paths
      * @param int $priority
@@ -585,7 +604,7 @@ class DZ
     
     /**
      * Directly add some javascript code into the head of the document
-     * 
+     * @api
      * @param string $js
      *  Some JS code
      * @return JDocument|null
@@ -600,7 +619,7 @@ class DZ
     
     /**
      * Add script into document head and auto connect it with domready event of the document.
-     * 
+     * @api
      * @param string $js
      *  Some javascript code
      *  
@@ -625,6 +644,7 @@ class DZ
      * 
      * The document will be in finalized state after this step, i.e all stylesheet and javascript functions
      * will no longer have effect after running this methods.
+     * @api
      */
     public function finalize()
     {
@@ -644,11 +664,13 @@ class DZ
                 }
             }
             
+            // We need jQuery for domready to work
+            JHtml::_('jquery.framework');
             $lnEnd   = "\12";
             $domreadyStr = '';
             // Generate domready script
             if (isset($this->_domready_script) && !empty($this->_domready_script)) {
-                $domreadyStr .= 'window.addEvent(\'domready\', function() {' . $this->_domready_script . $lnEnd . '});' . $lnEnd;
+                $domreadyStr .= 'jQuery(document).ready(function() {' . $this->_domready_script . $lnEnd . '});' . $lnEnd;
             }
             $this->document->addScriptDeclaration($domreadyStr);
         }       
@@ -658,6 +680,8 @@ class DZ
      */
     //@{
     /** Shortcut for filtering methods of the variable __filter
+     * @api
+     *
      * @see DZFilter::addFilter()
      * @see DZFilter::applyFilter()
      */
@@ -667,6 +691,7 @@ class DZ
     }
     
     /** Shortcut for filtering methods of the variable __filter
+     * @api
      * @see DZFilter::addFilter()
      * @see DZFilter::applyFilter()
      */
