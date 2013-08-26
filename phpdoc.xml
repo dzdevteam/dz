@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<phpdocumentor>
-  <title><![CDATA[DZCore]]></title>
-  <parser>
-	  <default-package-name><![CDATA[DZCore]]></default-package-name>
-      <target>.</target>
-  </parser>
-  <transformer>
-    <target>.</target>
-  </transformer>
-  <files>
-	<directory>/home/herop-kde/public_html/joomla/templates/dz/core/</directory>
-	<ignore>*/fields/*</ignore>
-	<ignore>*/includes/*</ignore>
-	<ignore>*/utilities/*</ignore>
-  </files>
-</phpdocumentor>
- 
+<phpdoc>
+    <title><![CDATA[DZ Core v2.0]]></title>
+    <parser>
+        <target>/home/herop-kde/public_html/docs</target>
+    </parser>
+    <transformer>
+        <target>/home/herop-kde/public_html/docs</target>
+    </transformer>
+    <transformations>
+        <template name="/home/herop-kde/Programming/projects-phpdoc/responsive-dz" />
+    </transformations>
+    <logging>
+        <paths>
+            <default>/tmp/phpdoc-{DATE}.log</default>
+            <errors>/tmp/phpdoc-{DATE}.errors.log</errors>
+        </paths>
+    </logging>
+    <files>
+        <file>*.php</file>
+    </files>
+</phpdoc>

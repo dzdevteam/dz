@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>DZCore » \DZFilter</title>
+<title>DZ Core v2.0 » \DZFilter</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -15,11 +15,11 @@
 <body>
 <div class="navbar navbar-fixed-top">
 <div class="navbar-inner"><div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">DZCore</a><div class="nav-collapse"><ul class="nav">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">DZ Core v2.0</a><div class="nav-collapse"><ul class="nav">
 <li class="dropdown">
 <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
                                     API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
-<li><a>Packages</a></li>
+<li><span class="label">Packages</span></li>
 <li><a href="../packages/DZCore.html"><i class="icon-folder-open"></i> DZCore</a></li>
 </ul>
 </li>
@@ -31,7 +31,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">27</span></a></li>
+                <span class="label label-info">0</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -56,8 +56,8 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method_addFilter" title="addFilter :: Add a filter function into a filter group"><span class="description">Add a filter function into a filter group</span><pre>addFilter()</pre></a></li>
-<li class="method public "><a href="#method_applyFilter" title="applyFilter :: Passthrough content into all filter functions of a group."><span class="description">Passthrough content into all filter functions of a group.</span><pre>applyFilter()</pre></a></li>
+<li class="method public "><a href="#method_addFilter" title="addFilter() :: Add a filter function into a filter group"><span class="description">Add a filter function into a filter group</span><pre>addFilter()</pre></a></li>
+<li class="method public "><a href="#method_applyFilter" title="applyFilter() :: Passthrough content into all filter functions of a group."><span class="description">Passthrough content into all filter functions of a group.</span><pre>applyFilter()</pre></a></li>
 </ul>
 </li>
 <li class="nav-header">
@@ -65,7 +65,7 @@
                     <ul></ul>
 </li>
 <li class="nav-header protected">» Protected
-                    <ul><li class="property protected "><a href="#property___filters" title="$__filters :: Contain all filter names and all functions name used for each filters."><span class="description"></span><pre>$__filters</pre></a></li></ul>
+                    <ul><li class="property protected "><a href="#property___filters" title="$__filters() :: Contain all filter names and all functions name used for each filters."><span class="description"></span><pre>$__filters</pre></a></li></ul>
 </li>
 </ul>
 </div>
@@ -74,7 +74,6 @@
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
-<li><a href="../namespaces/global.html">global</a></li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/DZFilter.html">DZFilter</a>
 </li>
@@ -104,33 +103,31 @@
 <pre>addFilter(string $filterName, string $filterFunc) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>If the group does not exists, it will be automatically
-created.</p>
+<div class="long_description">If the group does not exists, it will be automatically
+created.
 
-<p>The function must only have one argument to accept the
+The function must only have one argument to accept the
 data passed through it by applyFilter() method and then return
-the modified content.</p>
+the modified content.
 
-<p>Example usage:</p>
-
-<pre><code>  $filter->addFilter("emoticon", "replaceEmoticon");
+Example usage:
+<code>
+  $filter->addFilter("emoticon", "replaceEmoticon");
 
   function replaceEmoticon(&$content)
   {
-    // code to replace all :D, :^",etc into image
+     // code to replace all :D, :^",etc into image
 
      return $content;
   }
-</code></pre></div>
+</code></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$filterName</h4>
-<code>string</code><p>Filter group's name</p>
-</div>
+<code>string</code><p>Filter group's name</p></div>
 <div class="subelement argument">
 <h4>$filterFunc</h4>
-<code>string</code><p>Filter function's name</p>
-</div>
+<code>string</code><p>Filter function's name</p></div>
 </div></div>
 </div>
 <a id="method_applyFilter"></a><div class="element clickable method public method_applyFilter" data-toggle="collapse" data-target=".method_applyFilter .collapse">
@@ -138,43 +135,35 @@ the modified content.</p>
 <pre>applyFilter(mixed $content, string $filterName) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<div class="long_description"><p>How the content is modified is based on the behavior of each
-filter function.</p>
+<div class="long_description">How the content is modified is based on the behavior of each
+filter function.
 
-<p>Example Usage:</p></div>
-<table class="table table-bordered">
-<tr>
-<th>code</th>
-<td>// Replace all emoticon inside $content into image
-  $filter->applyFilter($content, "emoticon");</td>
-</tr>
-<tr>
-<th>endcode</th>
-<td></td>
-</tr>
-</table>
+Example Usage:
+<code>
+  // Replace all emoticon inside $content into image
+  $filter->applyFilter($content, "emoticon");
+</code></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$content</h4>
 <code>mixed</code><p>The content variable which needs to be filtered. Can be of any type.</p></div>
 <div class="subelement argument">
 <h4>$filterName</h4>
-<code>string</code><p>The filter group's name</p>
-</div>
+<code>string</code><p>The filter group's name</p></div>
 </div></div>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
 <a id="property___filters"> </a><div class="element clickable property protected property___filters" data-toggle="collapse" data-target=".property___filters .collapse">
-<h2></h2>
+<h2>Contain all filter names and all functions name used for each filters.</h2>
 <pre>$__filters : \array()</pre>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Structure:
+<div class="row collapse"><div class="detail-description"><div class="long_description">Structure:
  - filter_1
    - function_1.1
    - function_1.2
  - filter_2
-   - function_2.1</p></div></div></div>
+   - function_2.1</div></div></div>
 </div>
 </div>
 </div>
@@ -182,8 +171,9 @@ filter function.</p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2012-12-05T11:41:42+07:00.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.1
+</a> and<br>
+            generated on 2013-08-26T12:42:38+07:00.<br></footer></div>
 </div>
 </body>
 </html>

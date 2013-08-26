@@ -86,7 +86,9 @@ $(document).ready(function() {
     if(!$.browser.ipad) {
         $(".side-nav a").tooltip({'placement': 'top'});
     }
-
+    
+    $("a.api-link").tooltip({'placement': 'right'});
+    
     // chrome cannot deal with certain situations; warn the user about reduced features
     if ($.browser.chrome && (window.location.protocol == 'file:')) {
         $("body > .container").prepend(
@@ -185,4 +187,11 @@ $(document).ready(function() {
         }
         return [];
     }
+
+    // Hide API Documentation menu if it's empty
+//     $('.nav .dropdown a[href=#api]').next().filter(function(el) {
+//         if ($(el).children().length == 0) {
+//             return true;
+//         }
+//     }).parent().hide();
 });

@@ -1,924 +1,995 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project version="2.0.0a12" title="DZCore">
-  <file path="dzloader.class.php" hash="0830f29c647afc247904a158d75d8c90" package="Default">
-    <docblock line="2">
+<project title="DZ Core v2.0" version="2.0.1&#10;">
+  <file path="dzfilter.class.php" generated-path="dzfilter.class.html" hash="517702528058b6eb58a8349d8487fb58" package="Default">
+    <docblock line="0">
       <description>DZ uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system</description>
       <long-description></long-description>
-      <tag line="2" name="version" description="dzloader.class.php 2012-12-05"/>
-      <tag line="2" name="author" description="DZTeam http://dezign.vn"/>
-      <tag line="2" name="copyright" description="Copyright (C) 2012 DZ Creative Studio"/>
-      <tag line="2" name="license" description="http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only"/>
+      <tag name="version" description="dzfilter.class.php 2012-12-05" line="0"/>
+      <tag name="author" description="DZTeam http://dezign.vn" line="0"/>
+      <tag name="copyright" description="Copyright (C) 2012 - 2013 DZ Creative Studio" line="0"/>
+      <tag name="license" description="GNU/GPLv2 only" line="0" link="http://www.gnu.org/licenses/gpl-2.0.html"/>
     </docblock>
-    <include line="46" type="Include" package="Default">
-      <name/>
-    </include>
-    <class final="false" abstract="false" namespace="global" line="20" package="DZCore">
-      <extends/>
-      <name>DZLoader</name>
-      <full_name>\DZLoader</full_name>
-      <docblock line="13">
-        <description>This class has the responsibility to connect classes together</description>
-        <long-description></long-description>
-        <tag line="13" name="author" description="DZTeam"/>
-        <tag line="13" name="package" description="DZCore"/>
-      </docblock>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="30" package="DZCore">
-        <name>import</name>
-        <full_name>import</full_name>
-        <docblock line="22">
-          <description>Loads a class from specified directories.</description>
-          <long-description></long-description>
-          <tag line="22" name="param" description="The class name to look for ( dot notation )." type="string" variable="$filePath">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="22" name="return" description="" type="void">
-            <type by_reference="false">void</type>
-          </tag>
-        </docblock>
-        <argument line="30">
-          <name>$filePath</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-    </class>
-  </file>
-  <file path="dzconfig.class.php" hash="4292e86883063ccbf293570300917c36" package="Default">
-    <docblock line="2">
-      <description>DZ uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system</description>
-      <long-description></long-description>
-      <tag line="2" name="version" description="dzconfig.class.php 2012-12-05"/>
-      <tag line="2" name="author" description="DZTeam http://dezign.vn"/>
-      <tag line="2" name="copyright" description="Copyright (C) 2012 DZ Creative Studio"/>
-      <tag line="2" name="license" description="http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only"/>
-    </docblock>
-    <class final="false" abstract="true" namespace="global" line="21" package="DZCore">
-      <extends/>
-      <name>DZConfig</name>
-      <full_name>\DZConfig</full_name>
-      <docblock line="13">
-        <description>This class contains configuration information
-for using in DZ class</description>
-        <long-description></long-description>
-        <tag line="13" name="author" description="DZTeam"/>
-        <tag line="13" name="package" description="DZCore"/>
-      </docblock>
-      <constant namespace="global" line="27" package="DZCore">
-        <name>SIDEBAR_COMP_SIDEBAR_SIDEBAR</name>
-        <full_name>SIDEBAR_COMP_SIDEBAR_SIDEBAR</full_name>
-        <value>4</value>
-      </constant>
-      <constant namespace="global" line="28" package="DZCore">
-        <name>COMP_SIDEBAR_SIDEBAR</name>
-        <full_name>COMP_SIDEBAR_SIDEBAR</full_name>
-        <value>3</value>
-      </constant>
-      <constant namespace="global" line="29" package="DZCore">
-        <name>SIDEBAR_COMP_SIDEBAR</name>
-        <full_name>SIDEBAR_COMP_SIDEBAR</full_name>
-        <value>13</value>
-      </constant>
-      <constant namespace="global" line="30" package="DZCore">
-        <name>SIDEBAR_COMP</name>
-        <full_name>SIDEBAR_COMP</full_name>
-        <value>2</value>
-      </constant>
-      <constant namespace="global" line="31" package="DZCore">
-        <name>COMP_SIDEBAR</name>
-        <full_name>COMP_SIDEBAR</full_name>
-        <value>12</value>
-      </constant>
-      <constant namespace="global" line="32" package="DZCore">
-        <name>COMP</name>
-        <full_name>COMP</full_name>
-        <value>1</value>
-      </constant>
-    </class>
-  </file>
-  <file path="dzfilter.class.php" hash="be3b0995ccc7ad3f43794997adce55a9" package="Default">
-    <docblock line="2">
-      <description>DZ uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system</description>
-      <long-description></long-description>
-      <tag line="2" name="version" description="dzfilter.class.php 2012-12-05"/>
-      <tag line="2" name="author" description="DZTeam http://dezign.vn"/>
-      <tag line="2" name="copyright" description="Copyright (C) 2012 DZ Creative Studio"/>
-      <tag line="2" name="license" description="http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only"/>
-    </docblock>
-    <class final="false" abstract="false" namespace="global" line="21" package="DZCore\Utilities">
+    <class final="false" abstract="false" namespace="" line="21" package="DZCore\Utilities">
       <extends/>
       <name>DZFilter</name>
       <full_name>\DZFilter</full_name>
-      <docblock line="13">
+      <docblock line="21">
         <description>An internal class inspired by the filter model of wordpress.</description>
         <long-description></long-description>
-        <tag line="13" name="author" description="DZTeam"/>
-        <tag line="13" name="package" description="DZCore"/>
-        <tag line="13" name="subpackage" description="Utilities"/>
+        <tag name="author" description="DZTeam" line="21"/>
+        <tag name="package" description="DZCore" line="21"/>
+        <tag name="subpackage" description="Utilities" line="21"/>
       </docblock>
-      <property final="false" static="false" visibility="protected" line="36" namespace="global" package="Default">
+      <property static="false" visibility="protected" line="36" namespace="" package="DZCore\Utilities">
         <name>$__filters</name>
         <default>array()</default>
-        <docblock line="23">
+        <docblock line="36">
           <description>Contain all filter names and all functions name used for each filters.</description>
-          <long-description>&lt;p&gt;Structure:
+          <long-description>Structure:
  - filter_1
    - function_1.1
    - function_1.2
  - filter_2
-   - function_2.1&lt;/p&gt;</long-description>
-          <tag line="23" name="var" description="" type="\array()">
-            <type by_reference="false">\array()</type>
+   - function_2.1</long-description>
+          <tag name="var" description="" line="36" type="\array()" variable="">
+            <type>\array()</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="65" package="DZCore\Utilities">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="65" package="DZCore\Utilities">
         <name>addFilter</name>
-        <full_name>addFilter</full_name>
-        <docblock line="38">
+        <full_name>\DZFilter::addFilter()</full_name>
+        <docblock line="65">
           <description>Add a filter function into a filter group</description>
-          <long-description>&lt;p&gt;If the group does not exists, it will be automatically
-created.&lt;/p&gt;
+          <long-description>If the group does not exists, it will be automatically
+created.
 
-&lt;p&gt;The function must only have one argument to accept the
+The function must only have one argument to accept the
 data passed through it by applyFilter() method and then return
-the modified content.&lt;/p&gt;
+the modified content.
 
-&lt;p&gt;Example usage:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;  $filter-&gt;addFilter("emoticon", "replaceEmoticon");
+Example usage:
+&lt;code&gt;
+  $filter-&gt;addFilter("emoticon", "replaceEmoticon");
 
   function replaceEmoticon(&amp;$content)
   {
-    // code to replace all :D, :^",etc into image
+     // code to replace all :D, :^",etc into image
 
      return $content;
   }
-&lt;/code&gt;&lt;/pre&gt;</long-description>
-          <tag line="38" name="param" description="Filter group's name" type="string" variable="$filterName">
-            <type by_reference="false">string</type>
+&lt;/code&gt;</long-description>
+          <tag name="param" description="&lt;p&gt;Filter group's name&lt;/p&gt;" line="65" type="string" variable="$filterName">
+            <type>string</type>
           </tag>
-          <tag line="38" name="param" description="Filter function's name" type="string" variable="$filterFunc">
-            <type by_reference="false">string</type>
+          <tag name="param" description="&lt;p&gt;Filter function's name&lt;/p&gt;" line="65" type="string" variable="$filterFunc">
+            <type>string</type>
           </tag>
         </docblock>
-        <argument line="65">
+        <argument line="0">
           <name>$filterName</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="65">
+        <argument line="0">
           <name>$filterFunc</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="93" package="DZCore\Utilities">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="93" package="DZCore\Utilities">
         <name>applyFilter</name>
-        <full_name>applyFilter</full_name>
-        <docblock line="76">
+        <full_name>\DZFilter::applyFilter()</full_name>
+        <docblock line="93">
           <description>Passthrough content into all filter functions of a group.</description>
-          <long-description>&lt;p&gt;How the content is modified is based on the behavior of each
-filter function.&lt;/p&gt;
+          <long-description>How the content is modified is based on the behavior of each
+filter function.
 
-&lt;p&gt;Example Usage:&lt;/p&gt;</long-description>
-          <tag line="76" name="code" description="// Replace all emoticon inside $content into image&#10;  $filter-&gt;applyFilter($content, &quot;emoticon&quot;);"/>
-          <tag line="76" name="endcode" description=""/>
-          <tag line="76" name="param" description="The content variable which needs to be filtered. Can be of any type." type="mixed" variable="$content">
-            <type by_reference="false">mixed</type>
+Example Usage:
+&lt;code&gt;
+  // Replace all emoticon inside $content into image
+  $filter-&gt;applyFilter($content, "emoticon");
+&lt;/code&gt;</long-description>
+          <tag name="param" description="&lt;p&gt;The content variable which needs to be filtered. Can be of any type.&lt;/p&gt;" line="93" type="mixed" variable="$content">
+            <type>mixed</type>
           </tag>
-          <tag line="76" name="param" description="The filter group's name" type="string" variable="$filterName">
-            <type by_reference="false">string</type>
+          <tag name="param" description="&lt;p&gt;The filter group's name&lt;/p&gt;" line="93" type="string" variable="$filterName">
+            <type>string</type>
           </tag>
         </docblock>
-        <argument line="93">
+        <argument line="0">
           <name>$content</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
-        <argument line="93">
+        <argument line="0">
           <name>$filterName</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
     </class>
+    <source>eJydVttu2zgQffdXDIKgsQPbSrzoS9Jmm82lFyyKYOO8tOgatDSWuJFIgaTsuEH+vUNK1M2NH9ZIIHnIGZ45M2fod3/mST4Ijo8HcAzX36DQqMEkCF+kzFIGt4pluJHqEYaJMflZEGw2m+l/bnEqVTwaA4OPXx+Cj3d/r2cQSmFQGMiYYDFm9lVvtcHMhrf/H9aoNJcCop8rnhpU0zBlWk8JBcxOTmcT+jt563aywiRSEag5sgyq0yP8yWMxXQu3JZT5VvE4MXBVvw2vRi4STOzjD5vUlUJm+Brh3hQRlyWQlIcoNEIrrVgUNqegWtJBnKeT2fRkmpgsbWUpRbqtEgoGEa64wGh49OXucv5p8dfl/c3RCAh4xPF84Km9FMCJGiVYCi5j+qpzrjCC5dYRXtIBmYwwBbkCIj3KFRI3NXcdRpwlZ+EjEU2mK6nQmXSx9NYHw1NuOGpacFjLk6+/3bqzBs8DoI9DaD/HxKIwjAtgaerxCKq/Biai0liI0FD5tLPbbolgRZCQhUnlYfGW0fzz3qgiNIXCM2+h2pSbF6e1yRmr8IvT6asLs90gs9/vnXWC+NcPa6aAKcW2w1EPaeCeuZIGQ0OZHS4WVU7w3rtQSXukXUbEjafLH26rLRtzrGSR93n5vHKFd2sQSaJZSAP4xLXRY+AGNpwoXyJQ3WVGHRxSCbbeO7RNjdEO23PbSx5FVmjj2hUSRv0vBQVTceGEafGFIebGovDeETMMcuoSSt8khCxOLBLqUZbn6bZsnOEIMqRWjFxfkLcAhVRg4aPYtKiR+YpTmGom7AC9eWJZntomol6tW+NdSAK4aOp2WDI4uWBRVJ1+gJkkMqQ4GMOBwjxlId54ExWo9m3eakJ624dvDit4o2bzc6trqNIBWEiWrsrZKeHsegxn/x6M0YRlrXlGaXQ8O19KgsAf10L5UqcedHKvGzZnNIRBG8VF7Pn4SvJrQty2uuyo1OZe71uiY8fbc9QNUGmiWNJQbGhsitHCM26HL/msqCxpvFO4to0XFTkFYy4QDbqecnTtwlcwfMTtolRE7ySTcD25qAU6GtVur7taXLuu31uBf/TiNJU7r+3tlKz2e/jr5b3nfP9BI6UFqwxftkJ/wNyRHL0W/QVbjpdmTDeDmRhlZSfsKO6T3Dhp1kF0o1J6XzKreiqK3bNEmhicRjvFs9Pdx+id96qqH/aqmqj7pyUmL2h7KXLS2mEnzZ6ymonQmkjegyYC7o6C/crK+JMd9lWE5qB5iyq6NDhbUl6bhNNVJxAjbUfC0l/cNInhiglrsBUQdKlvc5zulWFXxPPmR8BvhPyKDlsUvGk4aMXv69Aqw11li/8hreeOOOjid/f+cG+nA9MeT1db3WBOMZ7t92CvugX9vFALm6sHOK63jM473i+D7tvL4OUXxpcrMQ==</source>
   </file>
-  <file path="dz.class.php" hash="f719a721e8d46302cb3a5d0ff87ec77c" package="DZCore">
-    <docblock line="2">
+  <file path="dzloader.class.php" generated-path="dzloader.class.html" hash="a80fd4d12f0e3b62c1e223f28dc2c1fb" package="Default">
+    <docblock line="0">
       <description>DZ uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system</description>
       <long-description></long-description>
-      <tag line="2" name="version" description="dz.class.php 2012-12-05"/>
-      <tag line="2" name="author" description="DZTeam http://dezign.vn"/>
-      <tag line="2" name="copyright" description="Copyright (C) 2012 DZ Creative Studio"/>
-      <tag line="2" name="license" description="http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only"/>
-      <tag line="2" name="package" description="DZCore"/>
+      <tag name="version" description="dzloader.class.php 2012-12-05" line="0"/>
+      <tag name="author" description="DZTeam http://dezign.vn" line="0"/>
+      <tag name="copyright" description="Copyright (C) 2012 - 2013 DZ Creative Studio" line="0"/>
+      <tag name="license" description="GNU/GPLv2 only" line="0" link="http://www.gnu.org/licenses/gpl-2.0.html"/>
     </docblock>
-    <include line="272" type="Include Once" package="Default">
-      <name/>
-    </include>
-    <constant namespace="global" line="152" package="DZCore">
+    <class final="false" abstract="false" namespace="" line="20" package="DZCore">
+      <extends/>
+      <name>DZLoader</name>
+      <full_name>\DZLoader</full_name>
+      <docblock line="20">
+        <description>This class has the responsibility to connect classes together</description>
+        <long-description></long-description>
+        <tag name="author" description="DZTeam" line="20"/>
+        <tag name="package" description="DZCore" line="20"/>
+      </docblock>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="30" package="DZCore">
+        <name>import</name>
+        <full_name>\DZLoader::import()</full_name>
+        <docblock line="30">
+          <description>Loads a class from specified directories.</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;The class name to look for ( dot notation ).&lt;/p&gt;&#10;" line="30" type="string" variable="$filePath">
+            <type>string</type>
+          </tag>
+          <tag name="return" description="" line="30" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$filePath</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJyFVG1P2zAQ/p5fcZOQklSQsE77sg1trLwMhCYk2BemqTLJJfFwbMt22pWJ/76zk5Qw0GaljXsvzz333KkfPupGR/lsFsEMjm6gs2jBNQjnSrWCwYlhLa6VuYOkcU6/y/P1ep39DM5MmTrdBQanX7/lp5cXqzkUSjqUDlomWY2tv9qNddh6eP/5tEJjuZJQ3gvFSjRZIZi1GbGA+f7r+R49+29DJOtcowyRukbWwlC9xHtey2wlQ0ih9MbwunGw2N6SRRqQYM+/3vimFgaZ4yuEK9eVXIVUwQuUFmHSVS0731I+uGxea7E3z/azxrVi0qSSYkMY9ORRiRWXWCbx+eXh9Zfl58Or4zgFol1yTNL30SjtdcMthFahYb3CBq1W0vJbLrjbgFNePYmF6+P8HFSNFGm24j2RJFg0K+5IaTItlMGRVV/o6OYiSBz9joBOYOLPDLzd0uD6uMqoFqzGglccS2JuiIQyHG02JIx5VI72AawzXNawU3GBl8w13jmGUKc44EpaHd+WUOoOKuKdQKkcSOVoGrQC6TN4g64zElaKl4MtD2/d3dJQqC4lFlB1sggAvNXKuGTLIw3Bfbf+DPE7mnx2F3ZumUUayejmFSSvOClNECEkTSfJ/vRmOABmDNv4eY6eh5dhfIXnKN5KILSFwgMmpLDXJlkuT84ujpfLFDKI8yyL/18gEPq+7fjHS5SNs1PLAeAvLVSJSZzFu49TmxQLiWFoYWbbxND2Uiud9LB/p+hh+JNatBtLg1qwYqgX5/8qap5QDQhcFqIjtr1sXpmYvvta9OvxDyN+ic5UHAKjAlNNx9uwaM8y+tiH6OEPrDFr3A==</source>
+  </file>
+  <file path="dz.class.php" generated-path="dz.class.html" hash="ca1ab0eb957de03820aee95e541969d1" package="DZCore">
+    <docblock line="0">
+      <description>DZ uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system</description>
+      <long-description></long-description>
+      <tag name="version" description="dz.class.php 2012-12-05" line="0"/>
+      <tag name="author" description="DZTeam http://dezign.vn" line="0"/>
+      <tag name="copyright" description="Copyright (C) 2012 -2013 DZ Creative Studio" line="0"/>
+      <tag name="license" description="GNU/GPLv2 only" line="0" link="http://www.gnu.org/licenses/gpl-2.0.html"/>
+      <tag name="package" description="DZCore" line="0"/>
+    </docblock>
+    <constant namespace="" line="177" package="DZCore">
       <name>DZ_INIT</name>
-      <full_name>\DZ_INIT</full_name>
+      <full_name>\\DZ_INIT</full_name>
       <value>"DZ_INIT"</value>
+      <docblock line="177">
+        <description></description>
+        <long-description></long-description>
+      </docblock>
     </constant>
-    <constant namespace="global" line="607" package="DZCore">
+    <constant namespace="" line="652" package="DZCore">
       <name>DZ_FINALIZED</name>
-      <full_name>\DZ_FINALIZED</full_name>
+      <full_name>\\DZ_FINALIZED</full_name>
       <value>"DZ_FINALIZED"</value>
+      <docblock line="652">
+        <description></description>
+        <long-description></long-description>
+      </docblock>
     </constant>
-    <class final="false" abstract="false" namespace="global" line="24" package="DZCore">
+    <class final="false" abstract="false" namespace="" line="25" package="DZCore">
       <extends/>
       <name>DZ</name>
       <full_name>\DZ</full_name>
-      <docblock line="16">
+      <docblock line="25">
         <description>The class which has the responsibility to provide API for
 building template based on DZ Framework</description>
         <long-description></long-description>
-        <tag line="16" name="author" description="DZTeam"/>
-        <tag line="16" name="package" description="DZCore"/>
+        <tag name="author" description="DZTeam" line="25"/>
+        <tag name="package" description="DZCore" line="25"/>
       </docblock>
-      <constant namespace="global" line="27" package="DZCore">
+      <constant namespace="" line="28" package="DZCore">
         <name>DEFAULT_PRIORITY</name>
-        <full_name>DEFAULT_PRIORITY</full_name>
+        <full_name>\DZ::DEFAULT_PRIORITY</full_name>
         <value>10</value>
-        <docblock line="26">
+        <docblock line="28">
           <description>Default priority for newly added stylesheets or scripts</description>
           <long-description></long-description>
         </docblock>
       </constant>
-      <property final="false" static="true" visibility="public" line="36" namespace="global" package="Default">
+      <property static="true" visibility="public" line="37" namespace="" package="DZCore">
         <name>$instances</name>
         <default>array()</default>
-        <docblock line="29">
+        <docblock line="37">
           <description>Template instances</description>
-          <long-description>&lt;p&gt;Contain all the template instances created by this class&lt;/p&gt;</long-description>
-          <tag line="29" name="type" description="DZ[]"/>
+          <long-description>Contain all the template instances created by this class</long-description>
+          <tag name="type" description="DZ[]" line="37"/>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="62" namespace="global" package="Default">
+      <property static="false" visibility="public" line="63" namespace="" package="DZCore">
         <name>$basePath</name>
         <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="63" namespace="global" package="Default">
-        <name>$baseUrl</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="64" namespace="global" package="Default">
-        <name>$templateName</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="65" namespace="global" package="Default">
-        <name>$templateUrl</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="66" namespace="global" package="Default">
-        <name>$templatePath</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="67" namespace="global" package="Default">
-        <name>$templateId</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="68" namespace="global" package="Default">
-        <name>$layoutPath</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="69" namespace="global" package="Default">
-        <name>$defaultMenuItem</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="70" namespace="global" package="Default">
-        <name>$currentMenuItem</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="71" namespace="global" package="Default">
-        <name>$currentMenuTree</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="72" namespace="global" package="Default">
-        <name>$template_prefix</name>
-        <default></default>
-      </property>
-      <property final="false" static="false" visibility="public" line="73" namespace="global" package="Default">
-        <name>$positions</name>
-        <default>array()</default>
-      </property>
-      <property final="false" static="false" visibility="public" line="77" namespace="global" package="Default">
-        <name>$document</name>
-        <default></default>
-        <docblock line="74">
+        <docblock line="63">
           <description></description>
           <long-description></long-description>
-          <tag line="74" name="var" description="" type="\JDocumentHTML">
-            <type by_reference="false">\JDocumentHTML</type>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="64" namespace="" package="DZCore">
+        <name>$baseUrl</name>
+        <default></default>
+        <docblock line="64">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="65" namespace="" package="DZCore">
+        <name>$templateName</name>
+        <default></default>
+        <docblock line="65">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="66" namespace="" package="DZCore">
+        <name>$templateUrl</name>
+        <default></default>
+        <docblock line="66">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="67" namespace="" package="DZCore">
+        <name>$templatePath</name>
+        <default></default>
+        <docblock line="67">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="68" namespace="" package="DZCore">
+        <name>$defaultMenuItem</name>
+        <default></default>
+        <docblock line="68">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="69" namespace="" package="DZCore">
+        <name>$currentMenuItem</name>
+        <default></default>
+        <docblock line="69">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="70" namespace="" package="DZCore">
+        <name>$currentMenuTree</name>
+        <default></default>
+        <docblock line="70">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" line="75" namespace="" package="DZCore">
+        <name>$document</name>
+        <default></default>
+        <docblock line="75">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" description="" line="75" type="\JDocumentHTML" variable="">
+            <type>\JDocumentHTML</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="78" namespace="global" package="Default">
+      <property static="false" visibility="public" line="76" namespace="" package="DZCore">
         <name>$language</name>
         <default></default>
+        <docblock line="76">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="79" namespace="global" package="Default">
+      <property static="false" visibility="public" line="77" namespace="" package="DZCore">
         <name>$session</name>
         <default></default>
+        <docblock line="77">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="80" namespace="global" package="Default">
+      <property static="false" visibility="public" line="78" namespace="" package="DZCore">
         <name>$currentUrl</name>
         <default></default>
+        <docblock line="78">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="87" namespace="global" package="Default">
+      <property static="false" visibility="protected" line="89" namespace="" package="DZCore">
         <name>$_working_params</name>
         <default></default>
+        <docblock line="89">
+          <description>Store the application's parameters</description>
+          <long-description></long-description>
+          <tag name="var" description="" line="89" type="\JRegistry" variable="">
+            <type>\JRegistry</type>
+          </tag>
+        </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="88" namespace="global" package="Default">
+      <property static="false" visibility="protected" line="97" namespace="" package="DZCore">
         <name>$_scripts</name>
         <default>array()</default>
+        <docblock line="97">
+          <description>Store the added javascript</description>
+          <long-description></long-description>
+          <tag name="see" description="" line="97"/>
+          <tag name="var" description="" line="97" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="89" namespace="global" package="Default">
+      <property static="false" visibility="protected" line="105" namespace="" package="DZCore">
         <name>$_domready_script</name>
         <default>''</default>
+        <docblock line="105">
+          <description>Store the javascript which need to execute when the dom is ready</description>
+          <long-description></long-description>
+          <tag name="see" description="" line="105"/>
+          <tag name="var" description="" line="105" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="90" namespace="global" package="Default">
+      <property static="false" visibility="protected" line="113" namespace="" package="DZCore">
         <name>$_styles</name>
         <default>array()</default>
+        <docblock line="113">
+          <description>Store the added style sheet</description>
+          <long-description></long-description>
+          <tag name="see" description="" line="113"/>
+          <tag name="var" description="" line="113" type="array" variable="">
+            <type>array</type>
+          </tag>
+        </docblock>
       </property>
-      <property final="false" static="false" visibility="public" line="91" namespace="global" package="Default">
-        <name>$_styles_available</name>
-        <default>array()</default>
-      </property>
-      <property final="false" static="false" visibility="protected" line="98" namespace="global" package="Default">
+      <property static="false" visibility="protected" line="120" namespace="" package="DZCore">
         <name>$__filter</name>
         <default></default>
-        <docblock line="94">
+        <docblock line="120">
           <description>Internal filter</description>
           <long-description></long-description>
-          <tag line="94" name="var" description="" type="\DZFilter">
-            <type by_reference="false">\DZFilter</type>
+          <tag name="var" description="" line="120" type="\DZFilter" variable="">
+            <type>\DZFilter</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="global" line="50" package="DZCore">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="" line="51" package="DZCore">
         <name>getInstance</name>
-        <full_name>getInstance</full_name>
-        <docblock line="38">
+        <full_name>\DZ::getInstance()</full_name>
+        <docblock line="51">
           <description>Get a template instance specified by its name.</description>
-          <long-description>&lt;p&gt;Automatically create a template instance if it didn't
-exists.&lt;/p&gt;</long-description>
-          <tag line="38" name="static" description=""/>
-          <tag line="38" name="param" description="" type="string" variable="$template_name">
-            <type by_reference="false">string</type>
+          <long-description>Automatically create a template instance if it didn't
+exists.</long-description>
+          <tag name="static" description="" line="51"/>
+          <tag name="param" description="" line="51" type="string" variable="$template_name">
+            <type>string</type>
           </tag>
-          <tag line="38" name="return" description="" type="\DZ">
-            <type by_reference="false">\DZ</type>
+          <tag name="return" description="" line="51" type="\DZ">
+            <type>\DZ</type>
           </tag>
         </docblock>
-        <argument line="50">
+        <argument line="0">
           <name>$template_name</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="112" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="134" package="DZCore">
         <name>__construct</name>
-        <full_name>__construct</full_name>
-        <docblock line="100">
+        <full_name>\DZ::__construct()</full_name>
+        <docblock line="134">
           <description>Constructor</description>
-          <long-description>&lt;p&gt;This will initialize the class when it is declared the first time.
+          <long-description>This will initialize the class when it is declared the first time.
 Some helper variables will be set and an internal filter for this
-class will also be created.&lt;/p&gt;</long-description>
-          <tag line="100" name="param" description="(optional) The name of the template which we want to build by this class. DEFAULT: null" type="string" variable="$template_name">
-            <type by_reference="false">string</type>
+class will also be created.</long-description>
+          <tag name="param" description="&lt;p&gt;(optional) The name of the template which we want to build by this class. DEFAULT: null&lt;/p&gt;&#10;" line="134" type="string" variable="$template_name">
+            <type>string</type>
           </tag>
-          <tag line="100" name="return" description="" type="\DZ">
-            <type by_reference="false">\DZ</type>
+          <tag name="return" description="" line="134" type="\DZ">
+            <type>\DZ</type>
           </tag>
         </docblock>
-        <argument line="112">
+        <argument line="0">
           <name>$template_name</name>
           <default>null</default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="145" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="170" package="DZCore">
         <name>init</name>
-        <full_name>init</full_name>
-        <docblock line="136">
+        <full_name>\DZ::init()</full_name>
+        <docblock line="170">
           <description>INITIALIZER</description>
-          <long-description>&lt;p&gt;Get and set important variables. The other functions depend
+          <long-description>Get and set important variables. The other functions depend
 heavily on this one. Do not use any other methods without first
-running of this function.&lt;/p&gt;</long-description>
-          <tag line="136" name="return" description="" type="void">
-            <type by_reference="false">void</type>
+running of this function.</long-description>
+          <tag name="api" description="" line="170"/>
+          <tag name="return" description="" line="170" type="void">
+            <type>void</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="183" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="207" package="DZCore">
         <name>cleanPath</name>
-        <full_name>cleanPath</full_name>
-        <docblock line="174">
+        <full_name>\DZ::cleanPath()</full_name>
+        <docblock line="207">
           <description>A function to make sure we have a valid path</description>
           <long-description></long-description>
-          <tag line="174" name="param" description="Path to be cleaned" type="string" variable="$path">
-            <type by_reference="false">string</type>
+          <tag name="param" description="&lt;p&gt;Path to be cleaned&lt;/p&gt;" line="207" type="string" variable="$path">
+            <type>string</type>
           </tag>
-          <tag line="174" name="return" description="$path&#10; Cleaned path" type="string">
-            <type by_reference="false">string</type>
+          <tag name="return" description="$path&#10; Cleaned path" line="207" type="string">
+            <type>string</type>
           </tag>
         </docblock>
-        <argument line="183">
+        <argument line="0">
           <name>$path</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="201" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="225" package="DZCore">
         <name>getCurrentTemplate</name>
-        <full_name>getCurrentTemplate</full_name>
-        <docblock line="196">
+        <full_name>\DZ::getCurrentTemplate()</full_name>
+        <docblock line="225">
           <description>Get the name of the current template</description>
           <long-description></long-description>
-          <tag line="196" name="return" description="" type="string">
-            <type by_reference="false">string</type>
+          <tag name="return" description="" line="225" type="string">
+            <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="217" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="" line="241" package="DZCore">
         <name>getDefaultMenuItem</name>
-        <full_name>getDefaultMenuItem</full_name>
-        <docblock line="212">
+        <full_name>\DZ::getDefaultMenuItem()</full_name>
+        <docblock line="241">
           <description>Get the default menu item's ID</description>
           <long-description></long-description>
-          <tag line="212" name="return" description="" type="int">
-            <type by_reference="false">int</type>
+          <tag name="return" description="" line="241" type="int">
+            <type>int</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="237" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="262" package="DZCore">
         <name>get</name>
-        <full_name>get</full_name>
-        <docblock line="226">
+        <full_name>\DZ::get()</full_name>
+        <docblock line="262">
           <description>Alternative way to retrieve a parameter</description>
           <long-description></long-description>
-          <tag line="226" name="param" description="Parameter's name" type="string" variable="$param">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="262"/>
+          <tag name="param" description="&lt;p&gt;Parameter's name&lt;/p&gt;" line="262" type="string" variable="$param">
+            <type>string</type>
           </tag>
-          <tag line="226" name="param" description="(optional) Default value if the parameter is not set. DEFAULT: null" type="mixed" variable="$default">
-            <type by_reference="false">mixed</type>
+          <tag name="param" description="&lt;p&gt;(optional) Default value if the parameter is not set. DEFAULT: null&lt;/p&gt;&#10;" line="262" type="mixed" variable="$default">
+            <type>mixed</type>
           </tag>
-          <tag line="226" name="return" description="The value of the parameter" type="mixed">
-            <type by_reference="false">mixed</type>
+          <tag name="return" description="The value of the parameter" line="262" type="mixed">
+            <type>mixed</type>
           </tag>
         </docblock>
-        <argument line="237">
+        <argument line="0">
           <name>$param</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="237">
+        <argument line="0">
           <name>$default</name>
           <default>null</default>
-          <type/>
+          <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="253" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="278" package="DZCore">
         <name>set</name>
-        <full_name>set</full_name>
-        <docblock line="242">
+        <full_name>\DZ::set()</full_name>
+        <docblock line="278">
           <description>Alternative way to set a parameter</description>
           <long-description></long-description>
-          <tag line="242" name="param" description="Parameter's name" type="string" variable="$param">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="278"/>
+          <tag name="param" description="&lt;p&gt;Parameter's name&lt;/p&gt;" line="278" type="string" variable="$param">
+            <type>string</type>
           </tag>
-          <tag line="242" name="param" description="Parameter's value" type="mixed" variable="$value">
-            <type by_reference="false">mixed</type>
+          <tag name="param" description="&lt;p&gt;Parameter's value&lt;/p&gt;" line="278" type="mixed" variable="$value">
+            <type>mixed</type>
           </tag>
-          <tag line="242" name="return" description="The parameter's value which just be set" type="mixed">
-            <type by_reference="false">mixed</type>
+          <tag name="return" description="The parameter&amp;#039;s value which just be set" line="278" type="mixed">
+            <type>mixed</type>
           </tag>
         </docblock>
-        <argument line="253">
+        <argument line="0">
           <name>$param</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="253">
+        <argument line="0">
           <name>$value</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="270" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="295" package="DZCore">
         <name>includeLayout</name>
-        <full_name>includeLayout</full_name>
-        <docblock line="262">
+        <full_name>\DZ::includeLayout()</full_name>
+        <docblock line="295">
           <description>Include the layout file specified by its name</description>
           <long-description></long-description>
-          <tag line="262" name="param" description="Layout file's name (no '.php' at the end)" type="string" variable="$layout">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="295"/>
+          <tag name="param" description="&lt;p&gt;Layout file's name (no '.php' at the end)&lt;/p&gt;&#10;" line="295" type="string" variable="$layout">
+            <type>string</type>
           </tag>
-          <tag line="262" name="return" description="" type="void">
-            <type by_reference="false">void</type>
+          <tag name="return" description="" line="295" type="void">
+            <type>void</type>
           </tag>
         </docblock>
-        <argument line="270">
+        <argument line="0">
           <name>$layout</name>
           <default>'default'</default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="287" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="312" package="DZCore">
         <name>countModules</name>
-        <full_name>countModules</full_name>
-        <docblock line="275">
+        <full_name>\DZ::countModules()</full_name>
+        <docblock line="312">
           <description>Count number of modules for a position or expression</description>
-          <long-description>&lt;p&gt;Refer to JDocumentHTML documentation for more details&lt;/p&gt;</long-description>
-          <tag line="275" name="see" description="JDocumentHTML Documentation" refers="\http://docs.joomla.org/JDocumentHTML/countModules"/>
-          <tag line="275" name="param" description="Position name or Expression" type="string" variable="$condition">
-            <type by_reference="false">string</type>
+          <long-description>Refer to JDocumentHTML documentation for more details</long-description>
+          <tag name="see" description="JDocumentHTML Documentation" line="312"/>
+          <tag name="param" description="&lt;p&gt;Position name or Expression&lt;/p&gt;" line="312" type="string" variable="$condition">
+            <type>string</type>
           </tag>
-          <tag line="275" name="return" description="The number of modules available in that position" type="int">
-            <type by_reference="false">int</type>
+          <tag name="return" description="The number of modules available in that position" line="312" type="int">
+            <type>int</type>
           </tag>
         </docblock>
-        <argument line="287">
+        <argument line="0">
           <name>$condition</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="315" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="340" package="DZCore">
         <name>displayModules</name>
-        <full_name>displayModules</full_name>
-        <docblock line="292">
+        <full_name>\DZ::displayModules()</full_name>
+        <docblock line="340">
           <description>Display individual module position</description>
           <long-description></long-description>
-          <tag line="292" name="param" description="Position name" type="string" variable="$position">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="340"/>
+          <tag name="param" description="&lt;p&gt;Position name&lt;/p&gt;" line="340" type="string" variable="$position">
+            <type>string</type>
           </tag>
-          <tag line="292" name="param" description="(optional) The span width of div wrapper for current position.&#10; If equals to 0, there will be no div wrapper around the position.&#10; DEFAULT: 0" type="int" variable="$span">
-            <type by_reference="false">int</type>
+          <tag name="param" description="&lt;p&gt;(optional) The span width of div wrapper for current position.&#10; If equals to 0, there will be no div wrapper around the position.&#10; DEFAULT: 0&lt;/p&gt;&#10;" line="340" type="int" variable="$span">
+            <type>int</type>
           </tag>
-          <tag line="292" name="param" description="(optional) Still creates the div wrapper if there's no module assigned&#10; to current position (but does not when span width is 0).&#10; DEFAULT: FALSE" type="bool" variable="$force">
-            <type by_reference="false">bool</type>
+          <tag name="param" description="&lt;p&gt;(optional) Still creates the div wrapper if there's no module assigned&#10; to current position (but does not when span width is 0).&#10; DEFAULT: FALSE&lt;/p&gt;&#10;" line="340" type="bool" variable="$force">
+            <type>bool</type>
           </tag>
-          <tag line="292" name="param" description="(optional) Specific style for all modules in this position.&#10; DEFAULT: &quot;dz&quot;." type="string" variable="$style">
-            <type by_reference="false">string</type>
+          <tag name="param" description="&lt;p&gt;(optional) Specific style for all modules in this position.&#10; DEFAULT: &quot;dz&quot;.&lt;/p&gt;&#10;" line="340" type="string" variable="$style">
+            <type>string</type>
           </tag>
-          <tag line="292" name="return" description="$html&#10; HTML code of the modules" type="string">
-            <type by_reference="false">string</type>
+          <tag name="return" description="$html&#10; HTML code of the modules" line="340" type="string">
+            <type>string</type>
           </tag>
         </docblock>
-        <argument line="315">
+        <argument line="0">
           <name>$position</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="315">
+        <argument line="0">
           <name>$span</name>
           <default>0</default>
-          <type/>
+          <type>int</type>
         </argument>
-        <argument line="315">
+        <argument line="0">
           <name>$force</name>
           <default>false</default>
-          <type/>
+          <type>bool</type>
         </argument>
-        <argument line="315">
+        <argument line="0">
           <name>$style</name>
           <default>"dz"</default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="354" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="381" package="DZCore">
         <name>displayModulesRow</name>
-        <full_name>displayModulesRow</full_name>
-        <docblock line="336">
+        <full_name>\DZ::displayModulesRow()</full_name>
+        <docblock line="381">
           <description>Display a row of related module positions</description>
           <long-description></long-description>
-          <tag line="336" name="param" description="All positions with this prefix will be display.&#10; The number of positions will be determine from params." type="string" variable="$prefix">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="381"/>
+          <tag name="param" description="&lt;p&gt;All positions with this prefix will be display.&#10; The number of positions will be determine from params.&lt;/p&gt;" line="381" type="string" variable="$prefix">
+            <type>string</type>
           </tag>
-          <tag line="336" name="param" description="(optional) Custom class for the row.&#10; DEFAULT: &quot;&quot;." type="string" variable="$class">
-            <type by_reference="false">string</type>
+          <tag name="param" description="&lt;p&gt;(optional) Custom class for the row.&#10; DEFAULT: &quot;&quot;.&lt;/p&gt;&#10;" line="381" type="string" variable="$class">
+            <type>string</type>
           </tag>
-          <tag line="336" name="param" description="(optional) This will override the &quot;Force Position&quot; settings from template's params.&#10; DEFAULT: NULL (not set)" type="boolean" variable="$forceoverride">
-            <type by_reference="false">boolean</type>
+          <tag name="param" description="&lt;p&gt;(optional) This will override the &quot;Force Position&quot; settings from template's params.&#10; DEFAULT: NULL (not set)&lt;/p&gt;&#10;" line="381" type="boolean" variable="$forceoverride">
+            <type>boolean</type>
           </tag>
-          <tag line="336" name="return" description="$html&#10; HTML code of the row" type="string">
-            <type by_reference="false">string</type>
+          <tag name="return" description="$html&#10; HTML code of the row" line="381" type="string">
+            <type>string</type>
           </tag>
         </docblock>
-        <argument line="354">
+        <argument line="0">
           <name>$prefix</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="354">
+        <argument line="0">
           <name>$class</name>
           <default>""</default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="354">
+        <argument line="0">
           <name>$style</name>
           <default>"dz"</default>
           <type/>
         </argument>
-        <argument line="354">
+        <argument line="0">
           <name>$forceoverride</name>
           <default>null</default>
-          <type/>
+          <type>boolean</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="381" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="408" package="DZCore">
         <name>rowExists</name>
-        <full_name>rowExists</full_name>
-        <docblock line="372">
+        <full_name>\DZ::rowExists()</full_name>
+        <docblock line="408">
           <description>Check for any module-assigned positions in a row</description>
           <long-description></long-description>
-          <tag line="372" name="param" description="The prefix of all the module positions displayed in this row." type="string" variable="$rowName">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="408"/>
+          <tag name="param" description="&lt;p&gt;The prefix of all the module positions displayed in this row.&lt;/p&gt;" line="408" type="string" variable="$rowName">
+            <type>string</type>
           </tag>
-          <tag line="372" name="return" description="TRUE if at least 1 position has a module assigned to it" type="boolean">
-            <type by_reference="false">boolean</type>
+          <tag name="return" description="TRUE if at least 1 position has a module assigned to it" line="408" type="boolean">
+            <type>boolean</type>
           </tag>
         </docblock>
-        <argument line="381">
+        <argument line="0">
           <name>$rowName</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="412" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="443" package="DZCore">
         <name>addStyle</name>
-        <full_name>addStyle</full_name>
-        <docblock line="401">
+        <full_name>\DZ::addStyle()</full_name>
+        <docblock line="443">
           <description>Enqueue stylesheet file with its priority</description>
           <long-description></long-description>
-          <tag line="401" name="param" description="Full URL of the stylesheet" type="string" variable="$file">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="443"/>
+          <tag name="param" description="&lt;p&gt;URL of the stylesheet&lt;/p&gt;" line="443" type="string" variable="$file">
+            <type>string</type>
           </tag>
-          <tag line="401" name="param" description="(optional) Lower value mean higher priority, i.e The CSS file will be added first.&#10; DEFAULT: DZ::DEFAULT_PRIORITY" type="int" variable="$priority">
-            <type by_reference="false">int</type>
+          <tag name="param" description="&lt;p&gt;True to indicate that the file path is relative to the root URL&lt;/p&gt;" line="443" type="boolean" variable="$isRel">
+            <type>boolean</type>
           </tag>
-          <tag line="401" name="return" description="" type="void">
-            <type by_reference="false">void</type>
+          <tag name="param" description="&lt;p&gt;(optional) Lower value mean higher priority, i.e The CSS file will be added first.&#10; DEFAULT: DZ::DEFAULT_PRIORITY&lt;/p&gt;&#10;" line="443" type="int" variable="$priority">
+            <type>int</type>
+          </tag>
+          <tag name="return" description="" line="443" type="void">
+            <type>void</type>
           </tag>
         </docblock>
-        <argument line="412">
+        <argument line="0">
           <name>$file</name>
           <default>''</default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="412">
+        <argument line="0">
+          <name>$isRel</name>
+          <default>false</default>
+          <type>boolean</type>
+        </argument>
+        <argument line="0">
           <name>$priority</name>
           <default>self::DEFAULT_PRIORITY</default>
-          <type/>
+          <type>int</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="465" package="DZCore">
-        <name>addStyleMinify</name>
-        <full_name>addStyleMinify</full_name>
-        <docblock line="447">
-          <description>Auto minify a stylesheet file using PHP Minify library</description>
-          <long-description>&lt;p&gt;Example usage:&lt;/p&gt;</long-description>
-          <tag line="447" name="code" description="// An instance of the core class&#10;  global $dz;&#10;  // Get the relative path of the template&#10;  $tplRelPath = JUri::base(true).'/templates/'.$dz-&gt;templateName;&#10;  // Add style&#10;  $dz-&gt;addStyleMinify($tplRelPath.'/css-compiled/bootstrap.css');"/>
-          <tag line="447" name="endcode" description=""/>
-          <tag line="447" name="param" description="Relative path (compare to root) of the file" type="string" variable="$relPath">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-        <argument line="465">
-          <name>$relPath</name>
-          <default></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="479" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="503" package="DZCore">
         <name>addStyles</name>
-        <full_name>addStyles</full_name>
-        <docblock line="471">
+        <full_name>\DZ::addStyles()</full_name>
+        <docblock line="503">
           <description>Enqueue group of stylesheet files with the same priority</description>
           <long-description></long-description>
-          <tag line="471" name="param" description="Array of stylesheet file's paths" type="array" variable="$styles">
-            <type by_reference="false">array</type>
+          <tag name="api" description="" line="503"/>
+          <tag name="param" description="&lt;p&gt;Array of stylesheet file's paths&lt;/p&gt;" line="503" type="array" variable="$styles">
+            <type>array</type>
           </tag>
-          <tag line="471" name="param" description="" type="int" variable="$priority">
-            <type by_reference="false">int</type>
+          <tag name="param" description="" line="503" type="int" variable="$priority">
+            <type>int</type>
           </tag>
         </docblock>
-        <argument line="479">
+        <argument line="0">
           <name>$styles</name>
           <default>array()</default>
-          <type/>
+          <type>array</type>
         </argument>
-        <argument line="479">
+        <argument line="0">
           <name>$priority</name>
           <default>self::DEFAULT_PRIORITY</default>
-          <type/>
+          <type>int</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="496" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="520" package="DZCore">
         <name>addInlineStyle</name>
-        <full_name>addInlineStyle</full_name>
-        <docblock line="486">
+        <full_name>\DZ::addInlineStyle()</full_name>
+        <docblock line="520">
           <description>Directly add some stylesheet code into the head of the document.</description>
-          <long-description>&lt;p&gt;If the document is FINALIZED, this function will no longer have any effect.&lt;/p&gt;</long-description>
-          <tag line="486" name="param" description="(optional) Some stylesheet code" type="string" variable="$css">
-            <type by_reference="false">string</type>
+          <long-description>If the document is FINALIZED, this function will no longer have any effect.</long-description>
+          <tag name="api" description="" line="520"/>
+          <tag name="param" description="&lt;p&gt;(optional) Some stylesheet code&lt;/p&gt;&#10;" line="520" type="string" variable="$css">
+            <type>string</type>
           </tag>
-          <tag line="486" name="return" description="" type="\JDocument|null">
-            <type by_reference="false">\JDocument</type>
-            <type by_reference="false">null</type>
+          <tag name="return" description="" line="520" type="\JDocument|null">
+            <type>\JDocument</type>
+            <type>null</type>
           </tag>
         </docblock>
-        <argument line="496">
+        <argument line="0">
           <name>$css</name>
           <default>''</default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="515" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="542" package="DZCore">
         <name>addScript</name>
-        <full_name>addScript</full_name>
-        <docblock line="503">
+        <full_name>\DZ::addScript()</full_name>
+        <docblock line="542">
           <description>Enqueue javascript file with its priority</description>
           <long-description></long-description>
-          <tag line="503" name="param" description="Full URL of the javascript file" type="string" variable="$file">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="542"/>
+          <tag name="param" description="&lt;p&gt;URL of the stylesheet&lt;/p&gt;" line="542" type="string" variable="$file">
+            <type>string</type>
           </tag>
-          <tag line="503" name="param" description="(optional) Lower value means higher priority. i.e The file will be added first.&#10; DEFAULT: DZ::DEFAULT_PRIORITY" type="int" variable="$priority">
-            <type by_reference="false">int</type>
+          <tag name="param" description="&lt;p&gt;True to indicate that the file path is relative to the root URL&lt;/p&gt;" line="542" type="boolean" variable="$isRel">
+            <type>boolean</type>
           </tag>
-          <tag line="503" name="return" description="" type="void">
-            <type by_reference="false">void</type>
+          <tag name="param" description="&lt;p&gt;(optional) Lower value means higher priority. i.e The file will be added first.&#10; DEFAULT: DZ::DEFAULT_PRIORITY&lt;/p&gt;&#10;" line="542" type="int" variable="$priority">
+            <type>int</type>
+          </tag>
+          <tag name="return" description="" line="542" type="void">
+            <type>void</type>
           </tag>
         </docblock>
-        <argument line="515">
+        <argument line="0">
           <name>$file</name>
           <default>''</default>
-          <type/>
+          <type>string</type>
         </argument>
-        <argument line="515">
+        <argument line="0">
+          <name>$isRel</name>
+          <default>false</default>
+          <type>boolean</type>
+        </argument>
+        <argument line="0">
           <name>$priority</name>
           <default>self::DEFAULT_PRIORITY</default>
-          <type/>
+          <type>int</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="554" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="598" package="DZCore">
         <name>addScripts</name>
-        <full_name>addScripts</full_name>
-        <docblock line="544">
+        <full_name>\DZ::addScripts()</full_name>
+        <docblock line="598">
           <description>Enqueue groups of script file with the same priority</description>
           <long-description></long-description>
-          <tag line="544" name="param" description="Array of script files' paths" type="array" variable="$scripts">
-            <type by_reference="false">array</type>
+          <tag name="api" description="" line="598"/>
+          <tag name="param" description="&lt;p&gt;Array of script files' paths&lt;/p&gt;" line="598" type="array" variable="$scripts">
+            <type>array</type>
           </tag>
-          <tag line="544" name="param" description="Priority of the group" type="int" variable="$priority">
-            <type by_reference="false">int</type>
+          <tag name="param" description="&lt;p&gt;Priority of the group&lt;/p&gt;" line="598" type="int" variable="$priority">
+            <type>int</type>
           </tag>
-          <tag line="544" name="return" description="" type="void">
-            <type by_reference="false">void</type>
+          <tag name="return" description="" line="598" type="void">
+            <type>void</type>
           </tag>
         </docblock>
-        <argument line="554">
+        <argument line="0">
           <name>$scripts</name>
           <default>array()</default>
-          <type/>
+          <type>array</type>
         </argument>
-        <argument line="554">
+        <argument line="0">
           <name>$priority</name>
           <default>self::DEFAULT_PRIORITY</default>
-          <type/>
+          <type>int</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="568" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="612" package="DZCore">
         <name>addInlineScript</name>
-        <full_name>addInlineScript</full_name>
-        <docblock line="561">
+        <full_name>\DZ::addInlineScript()</full_name>
+        <docblock line="612">
           <description>Directly add some javascript code into the head of the document</description>
           <long-description></long-description>
-          <tag line="561" name="param" description="Some JS code" type="string" variable="$js">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="612"/>
+          <tag name="param" description="&lt;p&gt;Some JS code&lt;/p&gt;" line="612" type="string" variable="$js">
+            <type>string</type>
           </tag>
-          <tag line="561" name="return" description="" type="\JDocument|null">
-            <type by_reference="false">\JDocument</type>
-            <type by_reference="false">null</type>
+          <tag name="return" description="" line="612" type="\JDocument|null">
+            <type>\JDocument</type>
+            <type>null</type>
           </tag>
         </docblock>
-        <argument line="568">
+        <argument line="0">
           <name>$js</name>
           <default>''</default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="584" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="628" package="DZCore">
         <name>addDomReadyScript</name>
-        <full_name>addDomReadyScript</full_name>
-        <docblock line="576">
+        <full_name>\DZ::addDomReadyScript()</full_name>
+        <docblock line="628">
           <description>Add script into document head and auto connect it with domready event of the document.</description>
           <long-description></long-description>
-          <tag line="576" name="param" description="Some javascript code" type="string" variable="$js">
-            <type by_reference="false">string</type>
+          <tag name="api" description="" line="628"/>
+          <tag name="param" description="&lt;p&gt;Some javascript code&lt;/p&gt;" line="628" type="string" variable="$js">
+            <type>string</type>
           </tag>
-          <tag line="576" name="return" description="" type="void">
-            <type by_reference="false">void</type>
+          <tag name="return" description="" line="628" type="void">
+            <type>void</type>
           </tag>
         </docblock>
-        <argument line="584">
+        <argument line="0">
           <name>$js</name>
           <default>''</default>
-          <type/>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="604" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="649" package="DZCore">
         <name>finalize</name>
-        <full_name>finalize</full_name>
-        <docblock line="595">
+        <full_name>\DZ::finalize()</full_name>
+        <docblock line="649">
           <description>FINALIZER</description>
-          <long-description>&lt;p&gt;This method will do the final work for the stylesheet and javascript functions, i.e actually put
-js and css into the document head.&lt;/p&gt;
+          <long-description>This method will do the final work for the stylesheet and javascript functions, i.e actually put
+js and css into the document head.
 
-&lt;p&gt;The document will be in finalized state after this step, i.e all stylesheet and javascript functions
-will no longer have effect after running this methods.&lt;/p&gt;</long-description>
+The document will be in finalized state after this step, i.e all stylesheet and javascript functions
+will no longer have effect after running this methods.</long-description>
+          <tag name="api" description="" line="649"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="639" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="688" package="DZCore">
         <name>addFilter</name>
-        <full_name>addFilter</full_name>
-        <docblock line="635">
+        <full_name>\DZ::addFilter()</full_name>
+        <docblock line="688">
           <description>Shortcut for filtering methods of the variable __filter</description>
           <long-description></long-description>
-          <tag line="635" name="see" description="\DZFilter::addFilter()" refers="\DZFilter::addFilter()"/>
-          <tag line="635" name="see" description="\DZFilter::applyFilter()" refers="\DZFilter::applyFilter()"/>
+          <tag name="api" description="" line="688"/>
+          <tag name="see" description="" line="688"/>
+          <tag name="see" description="" line="688"/>
         </docblock>
-        <argument line="639">
+        <argument line="0">
           <name>$filterName</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="639">
+        <argument line="0">
           <name>$filterFunc</name>
           <default></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="648" package="DZCore">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="" line="698" package="DZCore">
         <name>applyFilter</name>
-        <full_name>applyFilter</full_name>
-        <docblock line="644">
+        <full_name>\DZ::applyFilter()</full_name>
+        <docblock line="698">
           <description>Shortcut for filtering methods of the variable __filter</description>
           <long-description></long-description>
-          <tag line="644" name="see" description="\DZFilter::addFilter()" refers="\DZFilter::addFilter()"/>
-          <tag line="644" name="see" description="\DZFilter::applyFilter()" refers="\DZFilter::applyFilter()"/>
+          <tag name="api" description="" line="698"/>
+          <tag name="see" description="" line="698"/>
+          <tag name="see" description="" line="698"/>
         </docblock>
-        <argument line="648">
+        <argument line="0">
           <name>$content</name>
           <default></default>
           <type/>
         </argument>
-        <argument line="648">
+        <argument line="0">
           <name>$filterName</name>
           <default></default>
           <type/>
         </argument>
       </method>
     </class>
-    <parse_markers>
-      <error line="62" code="50018">No DocBlock was found for property $basePath</error>
-      <error line="63" code="50018">No DocBlock was found for property $baseUrl</error>
-      <error line="64" code="50018">No DocBlock was found for property $templateName</error>
-      <error line="65" code="50018">No DocBlock was found for property $templateUrl</error>
-      <error line="66" code="50018">No DocBlock was found for property $templatePath</error>
-      <error line="67" code="50018">No DocBlock was found for property $templateId</error>
-      <error line="68" code="50018">No DocBlock was found for property $layoutPath</error>
-      <error line="69" code="50018">No DocBlock was found for property $defaultMenuItem</error>
-      <error line="70" code="50018">No DocBlock was found for property $currentMenuItem</error>
-      <error line="71" code="50018">No DocBlock was found for property $currentMenuTree</error>
-      <error line="72" code="50018">No DocBlock was found for property $template_prefix</error>
-      <error line="73" code="50018">No DocBlock was found for property $positions</error>
-      <critical line="74" code="50019">No short description for property $document</critical>
-      <error line="78" code="50018">No DocBlock was found for property $language</error>
-      <error line="79" code="50018">No DocBlock was found for property $session</error>
-      <error line="80" code="50018">No DocBlock was found for property $currentUrl</error>
-      <error line="87" code="50018">No DocBlock was found for property $_working_params</error>
-      <error line="88" code="50018">No DocBlock was found for property $_scripts</error>
-      <error line="89" code="50018">No DocBlock was found for property $_domready_script</error>
-      <error line="90" code="50018">No DocBlock was found for property $_styles</error>
-      <error line="91" code="50018">No DocBlock was found for property $_styles_available</error>
-      <error line="336" code="50014">Name of argument $style does not match with the DocBlock's name $forceoverride in displayModulesRow()</error>
-      <error line="336" code="50015">Argument $forceoverride is missing from the Docblock of displayModulesRow()</error>
-      <error line="635" code="50015">Argument $filterName is missing from the Docblock of addFilter()</error>
-      <error line="635" code="50015">Argument $filterFunc is missing from the Docblock of addFilter()</error>
-      <error line="644" code="50015">Argument $content is missing from the Docblock of applyFilter()</error>
-      <error line="644" code="50015">Argument $filterName is missing from the Docblock of applyFilter()</error>
-    </parse_markers>
+    <source>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</source>
+  </file>
+  <file path="dzconfig.class.php" generated-path="dzconfig.class.html" hash="0a7bbe87c49f88461b530d3abd8576a0" package="Default">
+    <docblock line="0">
+      <description>DZ uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system</description>
+      <long-description></long-description>
+      <tag name="version" description="dzconfig.class.php 2012-12-05" line="0"/>
+      <tag name="author" description="DZTeam http://dezign.vn" line="0"/>
+      <tag name="copyright" description="Copyright (C) 2012 -2013 DZ Creative Studio" line="0"/>
+      <tag name="license" description="GNU/GPLv2 only" line="0" link="http://www.gnu.org/licenses/gpl-2.0.html"/>
+    </docblock>
+    <class final="false" abstract="true" namespace="" line="21" package="DZCore">
+      <extends/>
+      <name>DZConfig</name>
+      <full_name>\DZConfig</full_name>
+      <docblock line="21">
+        <description>This class contains configuration information
+for using in DZ class</description>
+        <long-description></long-description>
+        <tag name="author" description="DZTeam" line="21"/>
+        <tag name="package" description="DZCore" line="21"/>
+      </docblock>
+      <constant namespace="" line="27" package="DZCore">
+        <name>SIDEBAR_COMP_SIDEBAR_SIDEBAR</name>
+        <full_name>\DZConfig::SIDEBAR_COMP_SIDEBAR_SIDEBAR</full_name>
+        <value>4</value>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="28" package="DZCore">
+        <name>COMP_SIDEBAR_SIDEBAR</name>
+        <full_name>\DZConfig::COMP_SIDEBAR_SIDEBAR</full_name>
+        <value>3</value>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="29" package="DZCore">
+        <name>SIDEBAR_COMP_SIDEBAR</name>
+        <full_name>\DZConfig::SIDEBAR_COMP_SIDEBAR</full_name>
+        <value>13</value>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="30" package="DZCore">
+        <name>SIDEBAR_COMP</name>
+        <full_name>\DZConfig::SIDEBAR_COMP</full_name>
+        <value>2</value>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="31" package="DZCore">
+        <name>COMP_SIDEBAR</name>
+        <full_name>\DZConfig::COMP_SIDEBAR</full_name>
+        <value>12</value>
+        <docblock line="31">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="" line="32" package="DZCore">
+        <name>COMP</name>
+        <full_name>\DZConfig::COMP</full_name>
+        <value>1</value>
+        <docblock line="32">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+    </class>
+    <source>eJyFUcFy2jAQvfsr9hZgigVOeylhCnHStJmkYQq55MKo9mKrsSSPJMOQTP69a8VQMyQTjWyvtW9333s6+1bmZcB6vQB6cPEAlUULLke41loWHL4bLnGjzSN0cufKr4xtNpvwr0+G2mTdT8Dh6tc9u5rdrCNItHKoHEiueIayDu3WOpR1+/qZrNFYoRWkT4RdiSxMCm5tSCwgGgyjPu3BF4/klcu1IVIL5BKa6Sk+iUyFa+UhiS63RmS5g3gfdeKu7wR9ep/WmmKD3Ik1wtxVqdC+shAJKovQEpWpqlbEmpRlWVn0o3AQ5k4WLY1aFVvqQZsFKa6EwrRzcj2bLn4sz6fzy5MuEOtU4CjY+brIhQWv0xvEhfIBqa8MMSM3hFppI31cF9AP3YRQGSVqBb52b+GBMf6k5Mkj+U1HsTa4I8f/WGd44prRdbKeGTwHQIu4wUTR7cItEYKCb3XloDTYP6DmsTQjPuBLEOu4ctZTlf8bNHD2OoKxyTP40BfA/OfF5fn09zK+u50tdz/NF2AMn0ct8Nug3RrD6eiDzm3w8F00HK0xRO/xeAs8PEIfo1ro0d6al+DlH+WO/yc=</source>
   </file>
   <package name="DZCore" full_name="DZCore">
     <package name="Utilities" full_name="DZCore\Utilities"/>
   </package>
   <package name="Default" full_name="Default"/>
   <namespace name="global" full_name="global"/>
-  <marker count="0">todo</marker>
-  <marker count="0">fixme</marker>
   <deprecated count="0"/>
 </project>
