@@ -24,7 +24,7 @@ if (!defined('DZ_VERSION')) {
     require_once (realpath(dirname(__FILE__)) . '/core/dzloader.class.php');
     
     /**
-     * @param  string $path the gantry path to the class to import
+     * @param  string $path the dz path to the class to import
      *
      * @return void
      */
@@ -182,19 +182,19 @@ if (!defined('DZ_VERSION')) {
         }
     
         switch ($params->get('logoDisplay')) {
-            case 0:
+            case DZConfig::LOGO_TEXT_ONLY:
                 $logo = $sitename;
                 break;
-            case 1:
+            case DZConfig::LOGO_IMAGE_ONLY:
                 $logo = '<img src='.$doc->baseurl.'/'.$params->get('logoImage').' alt="'.$sitename.'"/>';
                 break;
-            case 2:
+            case DZConfig::LOGO_TEXT_AND_SLOGAN:
                 $logo = $sitename.'<small>'.$params->get('logoSlogan').'</small>';
                 break;
-            case 3:
+            case DZConfig::LOGO_IMAGE_AND_TEXT:
                 $logo = '<img src='.$params->get('logoImage').' alt="'.$sitename.'"/>'.$sitename;
                 break;
-            case 4:
+            case DZConfig::LOGO_IMAGE_TEXT_SLOGAN:
                 $logo = '<img src='.$params->get('logoImage').' alt="'.$sitename.'"/>'.$sitename.'<small>'.$params->get('logoSlogan').'</small>';
                 break;
         }

@@ -31,4 +31,15 @@ abstract class DZConfig
     const COMP_SIDEBAR                  = 12;
     const COMP                          = 1;
     ///@}
+    
+    /** @name Logo display configuration
+     * Constants for logo display options
+     */
+    ///@{
+    const LOGO_TEXT_ONLY            = 0;
+    const LOGO_IMAGE_ONLY           = 1;
+    const LOGO_TEXT_AND_SLOGAN      = 2;
+    const LOGO_IMAGE_AND_TEXT       = 3;
+    const LOGO_IMAGE_TEXT_SLOGAN    = 4;
+    ///@}
 }
