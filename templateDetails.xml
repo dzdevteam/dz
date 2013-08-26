@@ -37,7 +37,7 @@
     </languages>
     <config>
         <fields name="params" addfieldpath="/templates/dz/core/fields/">
-            <fieldset name="basic">
+            <fieldset name="dz">
                 <field type="spacer" name="logospacer" label="DZ_FIELDS_LOGO_SETTINGS_LABEL" />
                 <field
                     name="logoImage"
@@ -75,8 +75,8 @@
                     label="DZ_FIELD_LOGO_POSITION_LABEL"
                     description="DZ_FIELD_LOGO_POSITION_DESC"
                     />
-            </fieldset>         
-            <fieldset name="advanced" addfieldpath="/administrator/components/com_modules/models/fields">
+                
+                <field type="spacer" name="advancedspacer" label="DZ_FIELDS_ADVANCED_SETTINGS_LABEL" />
                 <field
                     name="compactHome"
                     label="DZ_FIELD_OTHER_COMPACT_HOME_LABEL"
@@ -207,8 +207,8 @@
                     default="2-2-2-2-2-2,0" 
                     description="DZ_FIELD_LAYOUT_FIXEDBOTTOM_DESC"
                     />
-            </fieldset>
-            <fieldset name="css" label="DZ_FIELDS_LESS_OPTIONS">
+            
+                <field type="spacer" name="lessspacer" label="DZ_FIELDS_LESS_COMPILATION_LABEL" />
                 <field type="spacer" label="DZ_FIELDS_VARIABLES_OPTIONS_LABEL" />
                 <field
                     name="baseFontSize"
@@ -283,6 +283,34 @@
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
                 </field>
+
+                <field type="spacer" label="DZ_FIELDS_EXTRA_LESSLABEL" />
+                <field
+                    name="components" type="list"
+                    multiple="true"
+                    label="DZ_FIELDS_EXTRA_SELECT_LABEL"
+                    description="DZ_FIELDS_EXTRA_SELECT_DESC">
+                    <option value="buttons.less">DZ_FIELDS_OPTION_LESS_BUTTON</option>
+                    <option value="button-groups.less">DZ_FIELDS_OPTION_LESS_BUTTON_GROUP</option>
+                    <option value="alerts.less">DZ_FIELDS_OPTION_LESS_ALERTS</option>
+                    <option value="navs.less">DZ_FIELDS_OPTION_LESS_NAVS</option>
+                    <option value="navbar.less">DZ_FIELDS_OPTION_LESS_NAVBAR</option>
+                    <option value="breadcrumbs.less">DZ_FIELDS_OPTION_LESS_BREADCRUMBS</option>
+                    <option value="pagination.less">DZ_FIELDS_OPTION_LESS_PAGINATION</option>
+                    <option value="pager.less">DZ_FIELDS_OPTION_LESS_PAGER</option>
+                    <option value="modals.less">DZ_FIELDS_OPTION_LESS_MODALS</option>
+                    <option value="tooltip.less">DZ_FIELDS_OPTION_LESS_TOOLTIP</option>
+                    <option value="popovers.less">DZ_FIELDS_OPTION_LESS_POPOVER</option>
+                    <option value="thumbnails.less">DZ_FIELDS_OPTION_LESS_THUMBNAILS</option>
+                    <option value="media.less">DZ_FIELDS_OPTION_LESS_MEDIA</option>
+                    <option value="labels-badges.less">DZ_FIELDS_OPTION_LESS_LABELS_BADGES</option>
+                    <option value="progress-bars.less">DZ_FIELDS_OPTION_LESS_PROGRESS_BARS</option>
+                    <option value="accordion.less">DZ_FIELDS_OPTION_LESS_ACCORDION</option>
+                    <option value="carousel.less">DZ_FIELDS_OPTION_LESS_CAROUSEL</option>
+                    <option value="hero-unit.less">DZ_FIELDS_OPTION_LESS_HERO_UNIT</option>
+                </field>
+                    
+
                 <field type="spacer" label="DZ_FIELDS_COMPILE_LESS_LABEL" />
                 <field
                     type="compileless"
