@@ -43,17 +43,20 @@
                     name="logoImage"
                     type="media"
                     label="DZ_FIELD_LOGO_IMAGE_LABEL"
+                    description="DZ_FIELD_LOGO_IMAGE_DESC"
                     />
                 <field
                     name="logoText"
                     type="text"
                     label="DZ_FIELD_LOGO_TEXT_LABEL"
+                    description="DZ_FIELD_LOGO_TEXT_DESC"
                     size="30"
                     />
                 <field
                     name="logoSlogan"
                     type="text"
                     label="DZ_FIELD_SLOGAN_LABEL"
+                    description="DZ_FIELD_SLOGAN_DESC"
                     size="30"
                     default=""
                     />  
@@ -61,6 +64,7 @@
                     name="logoDisplay"
                     type="list"
                     label="DZ_FIELD_LOGO_DISPLAY_LABEL"
+                    description="DZ_FIELD_LOGO_DISPLAY_DESC"
                     default="0"
                     >
                         <option value="0">DZ_FIELD_LOGO_DISPLAY_TEXT_ONLY</option>
