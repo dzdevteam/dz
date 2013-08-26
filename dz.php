@@ -178,7 +178,7 @@ if (!defined('DZ_VERSION')) {
             $sitename = $params->get('logoText');
         } else {
             $config = JFactory::getConfig();
-            $sitename = $config->getValue('config.sitename');
+            $sitename = $config->get('sitename');
         }
     
         switch ($params->get('logoDisplay')) {
