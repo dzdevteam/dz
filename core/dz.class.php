@@ -455,12 +455,6 @@ class DZ
                     $file = '/'.$file;
                     
                 $file = $this->templateUrl.'/core/utilities/min?f='.$file;
-            } else {
-                // Auto remove the first slash in file path
-                if (strpos($file, '/') === 0)
-                    $file = substr($file, 1);
-                    
-                $file = $this->baseUrl.$file;
             }
         }
         
