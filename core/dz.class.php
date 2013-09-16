@@ -381,7 +381,7 @@ class DZ
     public function displayModulesRow($prefix, $class = "", $style = "dz", $forceoverride = null)
     {
         $html = ''; 
-        list($rowlayout, $force) = explode(',', $this->get($prefix.'layout', '2-2-2-2-2-2,0'));
+        list($rowlayout, $force) = explode(',', $this->get($prefix.'layout', '3-3-3-3,0'));
         $rowspans = explode('-', $rowlayout);
         foreach ($rowspans as $i => $span)
         {

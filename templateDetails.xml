@@ -104,7 +104,7 @@
                     label="DZ_FIELD_OTHER_RESPONSIVE_LABEL"
                     description="DZ_FIELD_OTHER_RESPONSIVE_DESC"
                     type="radio" class="btn-group"
-                    default="1">
+                    default="0">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
                 </field>
@@ -138,77 +138,77 @@
                     name="fixedtoplayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_FIXEDTOP_LABEL" 
-                    default="2-2-2-2-2-2,0" 
+                    default="3-3-3-3,0" 
                     description="DZ_FIELD_LAYOUT_FIXEDTOP_DESC"
                     />
                 <field 
                     name="toplayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_TOP_LABEL" 
-                    default="2-2-2-2-2-2,0" 
+                    default="3-3-3-3,0" 
                     description="DZ_FIELD_LAYOUT_TOP_DESC"
                     />
                 <field
                     name="headerlayout"
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_HEADER_LABEL"
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_HEADER_DESC"
                     />
                 <field 
                     name="showcaselayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_SHOWCASE_LABEL" 
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_SHOWCASE_DESC" 
                     />              
                 <field 
                     name="featurelayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_FEATURE_LABEL" 
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_FEATURE_DESC" />
                 <field 
                     name="maintoplayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_MAINTOP_LABEL" 
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_MAINTOP_DESC" />
                 <field 
                     name="mainlayout" 
                     type="mainlayout"
                     label="DZ_FIELD_LAYOUT_MAIN_LABEL" 
-                    default="4,2-4-3-3,0,0"
+                    default="12,8-4,0,0"
                     description="DZ_FIELD_LAYOUT_MAIN_DESC" />
                 <field 
                     name="mainbottomlayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_MAINBOTTOM_LABEL" 
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_MAINBOTTOM_DESC" />
                 <field 
                     name="bottomlayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_BOTTOM_LABEL" 
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_BOTTOM_DESC" />
                 <field 
                     name="footerlayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_FOOTER_LABEL" 
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_FOOTER_DESC" />
                 <field 
                     name="copyrightlayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_COPYRIGHT_LABEL" 
-                    default="2-2-2-2-2-2,0"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_COPYRIGHT_DESC" />
                 <field 
                     name="fixedbottomlayout" 
                     type="rowlayout"
                     label="DZ_FIELD_LAYOUT_FIXEDBOTTOM_LABEL" 
-                    default="2-2-2-2-2-2,0" 
+                    default="3-3-3-3,0" 
                     description="DZ_FIELD_LAYOUT_FIXEDBOTTOM_DESC"
                     />
             
@@ -262,32 +262,7 @@
                     type="text"
                     size="40"
                     label="DZ_FIELD_VARIABLE_LINKCOLORHOVER" />
-                <field type="spacer" label="DZ_FIELDS_RESPONSIVE_OPTIONS_LABEL" />
-                <field
-                    name="responsive-767px-max"
-                    label="DZ_FIELD_RESPONSIVE_767MAX_LABEL"
-                    type="radio" class="btn-group"
-                    default="1">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-                <field
-                    name="responsive-768px-979px"
-                    label="DZ_FIELD_RESPONSIVE_768-979_LABEL"
-                    type="radio" class="btn-group"
-                    default="1">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-                <field
-                    name="responsive-1200px-min"
-                    label="DZ_FIELD_RESPONSIVE_1200MIN_LABEL"
-                    type="radio" class="btn-group"
-                    default="1">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-
+                
                 <field type="spacer" label="DZ_FIELDS_EXTRA_LESSLABEL" />
                 <field
                     name="components" type="list"
@@ -313,7 +288,32 @@
                     <option value="carousel.less">DZ_FIELDS_OPTION_LESS_CAROUSEL</option>
                     <option value="hero-unit.less">DZ_FIELDS_OPTION_LESS_HERO_UNIT</option>
                 </field>
-                    
+                
+                <field type="spacer" label="DZ_FIELDS_RESPONSIVE_OPTIONS_LABEL" />
+                <field
+                    name="responsive-767px-max"
+                    label="DZ_FIELD_RESPONSIVE_767MAX_LABEL"
+                    type="radio" class="btn-group"
+                    default="1">
+                    <option value="0">DZ_NO</option>
+                    <option value="1">DZ_YES</option>
+                </field>
+                <field
+                    name="responsive-768px-979px"
+                    label="DZ_FIELD_RESPONSIVE_768-979_LABEL"
+                    type="radio" class="btn-group"
+                    default="1">
+                    <option value="0">DZ_NO</option>
+                    <option value="1">DZ_YES</option>
+                </field>
+                <field
+                    name="responsive-1200px-min"
+                    label="DZ_FIELD_RESPONSIVE_1200MIN_LABEL"
+                    type="radio" class="btn-group"
+                    default="1">
+                    <option value="0">DZ_NO</option>
+                    <option value="1">DZ_YES</option>
+                </field>                    
 
                 <field type="spacer" label="DZ_FIELDS_COMPILE_LESS_LABEL" />
                 <field

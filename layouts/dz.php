@@ -7,7 +7,7 @@ $dz->addStyle($dz->templateUrl.'/css/mainstyle.css', true);
 $color = $dz->get('colorizeCSS', -1);
 if ($color != -1)
     $dz->addStyle($dz->templateUrl.'/css/colors/'.$color, true);
-if ($dz->get('responsive', 1))
+if ($dz->get('responsive', 0))
     $dz->addStyle($dz->templateUrl.'/css-compiled/responsive.css', true);
 
 

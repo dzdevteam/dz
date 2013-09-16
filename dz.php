@@ -68,7 +68,7 @@ if (!defined('DZ_VERSION')) {
         dz_import('core.dzconfig');
         $html = '';
         
-        list($maincfg, $mainlayout, $force, $expandMain) = explode(',',$dz->get('mainlayout', '4,2-6-3-3,0,0'));
+        list($maincfg, $mainlayout, $force, $expandMain) = explode(',',$dz->get('mainlayout', '12,8-4,0,0'));
         $mainlayout = explode('-', $mainlayout);
         switch ($maincfg)
         {
