@@ -178,7 +178,7 @@ class DZ
 
         $doc               = JFactory::getDocument();
         $this->document    =& $doc;
-        $this->_working_params = $this->document->params;
+        $this->_working_params = $this->document->params ? $this->document->params : new JRegistry();
         $this->language    = $doc->language;
         $this->session     = JFactory::getSession();
         $this->baseUrl     = JURI::root(true) . "/";
@@ -190,7 +190,8 @@ class DZ
         // use any menu item level overrides
         $menus                 = $app->getMenu();
         $menu                  = $menus->getActive();
-        $this->_working_params->merge($menu->params);
+        if ($menu != null)
+            $this->_working_params->merge($menu->params);
         $this->currentMenuItem = ($menu != null && isset($menu->id) ) ? $menu->id : null;
         $this->currentMenuTree = ($menu != null && isset($menu->tree) ) ? $menu->tree : array();
     }
