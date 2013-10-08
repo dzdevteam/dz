@@ -178,7 +178,7 @@ class DZ
 
         $doc               = JFactory::getDocument();
         $this->document    =& $doc;
-        $this->_working_params = $this->document->params ? $this->document->params : new JRegistry();
+        $this->_working_params = isset($this->document->params) ? $this->document->params : new JRegistry();
         $this->language    = $doc->language;
         $this->session     = JFactory::getSession();
         $this->baseUrl     = JURI::root(true) . "/";
