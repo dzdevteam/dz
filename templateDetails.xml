@@ -11,16 +11,17 @@
     <version>2.0.0</version>
     <description></description>
 
-    <files>     
+    <files>
+        <filename>compiler.php</filename>
+        <filename>component.php</filename>
+        <filename>dz.php</filename>
+        <filename>error.php</filename>
+        <filename>favicon.ico</filename>
         <filename>index.html</filename>
         <filename>index.php</filename>
-        <filename>dz.php</filename>
-        <filename>compiler.php</filename>
-        <filename>templateDetails.xml</filename>
         <filename>template_preview.png</filename>
         <filename>template_thumbnail.png</filename>
-        <filename>favicon.ico</filename>
-        <filename>error.php</filename>
+        <filename>templateDetails.xml</filename>
         <folder>core</folder>
         <folder>css</folder>
         <folder>css-compiled</folder>
@@ -59,7 +60,7 @@
                     description="DZ_FIELD_SLOGAN_DESC"
                     size="30"
                     default=""
-                    />  
+                    />
                 <field
                     name="logoDisplay"
                     type="list"
@@ -79,7 +80,7 @@
                     label="DZ_FIELD_LOGO_POSITION_LABEL"
                     description="DZ_FIELD_LOGO_POSITION_DESC"
                     />
-                
+
                 <field type="spacer" name="advancedspacer" label="DZ_FIELDS_ADVANCED_SETTINGS_LABEL" />
                 <field
                     name="compactHome"
@@ -123,7 +124,7 @@
                     default="-1"
                     label="DZ_FIELD_OTHER_COLOR_CSS_LABEL"
                     description="DZ_FIELD_OTHER_COLOR_CSS_DESC"
-                    directory="templates/dz/css/colors/" 
+                    directory="templates/dz/css/colors/"
                     filter="\.css$"
                     hide_default="true"/>
                 <field
@@ -132,20 +133,20 @@
                     size="40"
                     default=""
                     label="DZ_FIELD_OTHER_GOOGLE_ANALYTICS_LABEL"
-                    description="DZ_FIELD_OTHER_GOOGLE_ANALYTICS_DESC" />           
+                    description="DZ_FIELD_OTHER_GOOGLE_ANALYTICS_DESC" />
                 <field type="spacer" name="topspacer" label="DZ_FIELDS_POSITION_LAYOUT_LABEL" />
-                <field 
-                    name="fixedtoplayout" 
+                <field
+                    name="fixedtoplayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_FIXEDTOP_LABEL" 
-                    default="3-3-3-3,0" 
+                    label="DZ_FIELD_LAYOUT_FIXEDTOP_LABEL"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_FIXEDTOP_DESC"
                     />
-                <field 
-                    name="toplayout" 
+                <field
+                    name="toplayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_TOP_LABEL" 
-                    default="3-3-3-3,0" 
+                    label="DZ_FIELD_LAYOUT_TOP_LABEL"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_TOP_DESC"
                     />
                 <field
@@ -155,63 +156,63 @@
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_HEADER_DESC"
                     />
-                <field 
-                    name="showcaselayout" 
+                <field
+                    name="showcaselayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_SHOWCASE_LABEL" 
+                    label="DZ_FIELD_LAYOUT_SHOWCASE_LABEL"
                     default="3-3-3-3,0"
-                    description="DZ_FIELD_LAYOUT_SHOWCASE_DESC" 
-                    />              
-                <field 
-                    name="featurelayout" 
+                    description="DZ_FIELD_LAYOUT_SHOWCASE_DESC"
+                    />
+                <field
+                    name="featurelayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_FEATURE_LABEL" 
+                    label="DZ_FIELD_LAYOUT_FEATURE_LABEL"
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_FEATURE_DESC" />
-                <field 
-                    name="maintoplayout" 
+                <field
+                    name="maintoplayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_MAINTOP_LABEL" 
+                    label="DZ_FIELD_LAYOUT_MAINTOP_LABEL"
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_MAINTOP_DESC" />
-                <field 
-                    name="mainlayout" 
+                <field
+                    name="mainlayout"
                     type="mainlayout"
-                    label="DZ_FIELD_LAYOUT_MAIN_LABEL" 
+                    label="DZ_FIELD_LAYOUT_MAIN_LABEL"
                     default="12,8-4,0,0"
                     description="DZ_FIELD_LAYOUT_MAIN_DESC" />
-                <field 
-                    name="mainbottomlayout" 
+                <field
+                    name="mainbottomlayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_MAINBOTTOM_LABEL" 
+                    label="DZ_FIELD_LAYOUT_MAINBOTTOM_LABEL"
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_MAINBOTTOM_DESC" />
-                <field 
-                    name="bottomlayout" 
+                <field
+                    name="bottomlayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_BOTTOM_LABEL" 
+                    label="DZ_FIELD_LAYOUT_BOTTOM_LABEL"
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_BOTTOM_DESC" />
-                <field 
-                    name="footerlayout" 
+                <field
+                    name="footerlayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_FOOTER_LABEL" 
+                    label="DZ_FIELD_LAYOUT_FOOTER_LABEL"
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_FOOTER_DESC" />
-                <field 
-                    name="copyrightlayout" 
+                <field
+                    name="copyrightlayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_COPYRIGHT_LABEL" 
+                    label="DZ_FIELD_LAYOUT_COPYRIGHT_LABEL"
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_COPYRIGHT_DESC" />
-                <field 
-                    name="fixedbottomlayout" 
+                <field
+                    name="fixedbottomlayout"
                     type="rowlayout"
-                    label="DZ_FIELD_LAYOUT_FIXEDBOTTOM_LABEL" 
-                    default="3-3-3-3,0" 
+                    label="DZ_FIELD_LAYOUT_FIXEDBOTTOM_LABEL"
+                    default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_FIXEDBOTTOM_DESC"
                     />
-            
+
                 <field type="spacer" name="lessspacer" label="DZ_FIELDS_LESS_COMPILATION_LABEL" />
                 <field type="spacer" label="DZ_FIELDS_VARIABLES_OPTIONS_LABEL" />
                 <field
@@ -262,7 +263,7 @@
                     type="text"
                     size="40"
                     label="DZ_FIELD_VARIABLE_LINKCOLORHOVER" />
-                
+
                 <field type="spacer" label="DZ_FIELDS_EXTRA_LESSLABEL" />
                 <field
                     name="components" type="list"
@@ -288,7 +289,7 @@
                     <option value="carousel.less">DZ_FIELDS_OPTION_LESS_CAROUSEL</option>
                     <option value="hero-unit.less">DZ_FIELDS_OPTION_LESS_HERO_UNIT</option>
                 </field>
-                
+
                 <field type="spacer" label="DZ_FIELDS_RESPONSIVE_OPTIONS_LABEL" />
                 <field
                     name="responsive-767px-max"
@@ -313,7 +314,7 @@
                     default="1">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
-                </field>                    
+                </field>
 
                 <field type="spacer" label="DZ_FIELDS_COMPILE_LESS_LABEL" />
                 <field
