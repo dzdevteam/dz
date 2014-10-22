@@ -8,16 +8,15 @@
 global $dz;
 
 // Add styles
-$dz->addStyle($dz->templateUrl.'/css-compiled/bootstrap.css', true);
+$dz->addStyle($dz->templateUrl.'/css/bootstrap.css', true);
 $dz->addStyle($dz->templateUrl.'/css/mainstyle.css', true);
 $color = $dz->get('colorizeCSS', -1);
 if ($color != -1)
     $dz->addStyle($dz->templateUrl.'/css/colors/'.$color, true);
-if ($dz->get('responsive', 0))
-    $dz->addStyle($dz->templateUrl.'/css-compiled/responsive.css', true);
 
 // Add scripts
-JHtml::_('bootstrap.framework');
+$dz->addScript($dz->templateUrl.'/js/jquery-1.11.1.min.js', false);
+$dz->addScript($dz->templateUrl.'/js/bootstrap.js', false);
 ?>
 <div id="block-dz">
 <div class="container">

@@ -352,7 +352,7 @@ class DZ
         {
             if ($force || !empty($content))
             {
-                $html = '<div class="span'.$span.'">'.$content.'</div>';
+                $html = '<div class="col-md-'.$span.'">'.$content.'</div>';
             }
         } else {
             $html = $content;   

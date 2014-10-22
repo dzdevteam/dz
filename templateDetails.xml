@@ -12,7 +12,6 @@
     <description></description>
 
     <files>
-        <filename>compiler.php</filename>
         <filename>component.php</filename>
         <filename>dz.php</filename>
         <filename>error.php</filename>
@@ -24,13 +23,11 @@
         <filename>templateDetails.xml</filename>
         <folder>core</folder>
         <folder>css</folder>
-        <folder>css-compiled</folder>
         <folder>fonts</folder>
         <folder>html</folder>
         <folder>img</folder>
         <folder>js</folder>
         <folder>layouts</folder>
-        <folder>less</folder>
     </files>
     <languages>
         <language tag="en-GB">language/en-GB.tpl_dz.ini</language>
@@ -97,24 +94,6 @@
                     description="DZ_FIELD_OTHER_MOD_OVER_COMP_DESC"
                     type="radio" class="btn-group"
                     default="0">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-                <field
-                    name="responsive"
-                    label="DZ_FIELD_OTHER_RESPONSIVE_LABEL"
-                    description="DZ_FIELD_OTHER_RESPONSIVE_DESC"
-                    type="radio" class="btn-group"
-                    default="0">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-                <field
-                    name="autominify"
-                    label="DZ_FIELD_OTHER_AUTOMINIFY_LABEL"
-                    description="DZ_FIELD_OTHER_AUTOMINIFY_DESC"
-                    type="radio" class="btn-group"
-                    default="1">
                     <option value="0">DZ_NO</option>
                     <option value="1">DZ_YES</option>
                 </field>
@@ -212,114 +191,12 @@
                     default="3-3-3-3,0"
                     description="DZ_FIELD_LAYOUT_FIXEDBOTTOM_DESC"
                     />
-
-                <field type="spacer" name="lessspacer" label="DZ_FIELDS_LESS_COMPILATION_LABEL" />
-                <field type="spacer" label="DZ_FIELDS_VARIABLES_OPTIONS_LABEL" />
-                <field
-                    name="baseFontSize"
-                    default="14px"
-                    type="text"
-                    size="40"
-                    label="DZ_FIELD_VARIABLE_BASEFONTSIZE" />
-                <field
-                    name="sansFontFamily"
-                    default="'Helvetica Neue', Helvetica, Arial, sans-serif"
-                    type="text"
-                    size="40"
-                    label="DZ_FIELD_VARIABLE_SANSFONTFAMILY" />
-                <field
-                    name="serifFontFamily"
-                    default="Georgia, 'Times New Roman', Times, serif"
-                    type="text"
-                    size="40"
-                    label="DZ_FIELD_VARIABLE_SERIFFONTFAMILY" />
-                <field
-                    name="baseFontFamily"
-                    default="@sansFontFamily"
-                    type="text"
-                    size="40"
-                    label="DZ_FIELD_VARIABLE_BASEFONTFAMILY" />
-                <field
-                    name="baseLineHeight"
-                    default="20px"
-                    type="text"
-                    size="40"
-                    label="DZ_FIELD_VARIABLE_BASELINEHEIGHT" />
                 <field
                     name="textColor"
                     default="#333"
                     type="color"
                     size="40"
-                    label="DZ_FIELD_VARIABLE_TEXTCOLOR" />
-                <field
-                    name="linkColor"
-                    default="#08c"
-                    type="color"
-                    size="40"
-                    label="DZ_FIELD_VARIABLE_LINKCOLOR" />
-                <field
-                    name="linkColorHover"
-                    default="darken(@linkColor, 15%)"
-                    type="text"
-                    size="40"
-                    label="DZ_FIELD_VARIABLE_LINKCOLORHOVER" />
-
-                <field type="spacer" label="DZ_FIELDS_EXTRA_LESSLABEL" />
-                <field
-                    name="components" type="list"
-                    multiple="true"
-                    label="DZ_FIELDS_EXTRA_SELECT_LABEL"
-                    description="DZ_FIELDS_EXTRA_SELECT_DESC">
-                    <option value="buttons.less">DZ_FIELDS_OPTION_LESS_BUTTON</option>
-                    <option value="button-groups.less">DZ_FIELDS_OPTION_LESS_BUTTON_GROUP</option>
-                    <option value="alerts.less">DZ_FIELDS_OPTION_LESS_ALERTS</option>
-                    <option value="navs.less">DZ_FIELDS_OPTION_LESS_NAVS</option>
-                    <option value="navbar.less">DZ_FIELDS_OPTION_LESS_NAVBAR</option>
-                    <option value="breadcrumbs.less">DZ_FIELDS_OPTION_LESS_BREADCRUMBS</option>
-                    <option value="pagination.less">DZ_FIELDS_OPTION_LESS_PAGINATION</option>
-                    <option value="pager.less">DZ_FIELDS_OPTION_LESS_PAGER</option>
-                    <option value="modals.less">DZ_FIELDS_OPTION_LESS_MODALS</option>
-                    <option value="tooltip.less">DZ_FIELDS_OPTION_LESS_TOOLTIP</option>
-                    <option value="popovers.less">DZ_FIELDS_OPTION_LESS_POPOVER</option>
-                    <option value="thumbnails.less">DZ_FIELDS_OPTION_LESS_THUMBNAILS</option>
-                    <option value="media.less">DZ_FIELDS_OPTION_LESS_MEDIA</option>
-                    <option value="labels-badges.less">DZ_FIELDS_OPTION_LESS_LABELS_BADGES</option>
-                    <option value="progress-bars.less">DZ_FIELDS_OPTION_LESS_PROGRESS_BARS</option>
-                    <option value="accordion.less">DZ_FIELDS_OPTION_LESS_ACCORDION</option>
-                    <option value="carousel.less">DZ_FIELDS_OPTION_LESS_CAROUSEL</option>
-                    <option value="hero-unit.less">DZ_FIELDS_OPTION_LESS_HERO_UNIT</option>
-                </field>
-
-                <field type="spacer" label="DZ_FIELDS_RESPONSIVE_OPTIONS_LABEL" />
-                <field
-                    name="responsive-767px-max"
-                    label="DZ_FIELD_RESPONSIVE_767MAX_LABEL"
-                    type="radio" class="btn-group"
-                    default="1">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-                <field
-                    name="responsive-768px-979px"
-                    label="DZ_FIELD_RESPONSIVE_768-979_LABEL"
-                    type="radio" class="btn-group"
-                    default="1">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-                <field
-                    name="responsive-1200px-min"
-                    label="DZ_FIELD_RESPONSIVE_1200MIN_LABEL"
-                    type="radio" class="btn-group"
-                    default="1">
-                    <option value="0">DZ_NO</option>
-                    <option value="1">DZ_YES</option>
-                </field>
-
-                <field type="spacer" label="DZ_FIELDS_COMPILE_LESS_LABEL" />
-                <field
-                    type="compileless"
-                    label="DZ_FIELD_COMPILE_LESS_LABEL" />
+                    label="Unused color" />
             </fieldset>
         </fields>
     </config>

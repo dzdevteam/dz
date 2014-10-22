@@ -141,7 +141,7 @@ if (!defined('DZ_VERSION')) {
         /** @var $dz DZ */
         global $dz;
         
-        $html   =   '<div class="span'.$span.( !empty($class) ? ' '.$class : '').'"><div class="dz-main">';
+        $html   =   '<div class="col-md-'.$span.( !empty($class) ? ' '.$class : '').'"><div class="dz-main">';
         
         $before =   $dz->displayModules("before", 0);
         if (!empty($before))
